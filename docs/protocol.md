@@ -77,7 +77,7 @@ The strike window (seconds 3–6) is preserved in the released time-series data 
 
 ## Ethics
 
-Approved under the parent CEFADE protocol (Robalino doctoral project on fatigue-induced changes in karate attack biomechanics, submitted 21 March 2025; approval number pending administrative confirmation). All participants provided written informed consent prior to data collection in accordance with the Declaration of Helsinki. Data handling complies with the General Data Protection Regulation (EU 2016/679).
+The experimental protocol was approved by the Ethics Committee of the Faculty of Sport, University of Porto, under protocol ID **CEFADE 09/2025**. The approval was originally granted to the parent doctoral project of J. A. Robalino on fatigue-induced changes in karate attack biomechanics (submitted 21 March 2025), which encompasses both the fatigue-protocol experiments described in the original ethics submission and the quasi-static *gyaku-tsuki* substrate acquisition documented here. All participants provided written informed consent prior to data collection in accordance with the Declaration of Helsinki. Data handling complies with the General Data Protection Regulation (EU 2016/679).
 
 ## References
 
