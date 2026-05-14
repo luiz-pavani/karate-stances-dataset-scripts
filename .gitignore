@@ -1,0 +1,41 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# MATLAB
+*.asv
+*.mat~
+slprj/
+*.autosave
+
+# Large data (use Figshare DOI for the full archive)
+data/figshare/
+data/raw/
+data/processed/
+*.csv.gz
+*.parquet
+*.h5
+
+# Figures (regenerated)
+figures/_generated/
+*.tmp.pdf
+
+# Local notes
+notes_local/
+TODO.local.md

@@ -1,0 +1,10 @@
+# Placeholder
+
+MATLAB processing pipeline lands here when Robalino/Parolini hand off the scripts.
+
+Expected contents:
+- `load_trial.m`            — parse `<ID>_<BASE>_<TRIAL>.csv` to struct
+- `filter_kinematics.m`     — 4th-order zero-lag Butterworth, Fc = 8 Hz
+- `compute_cop.m`            — COP per platform from F and M, force-weighted combined COP
+- `compute_descriptors.m`   — per-window summary descriptors (BoS area, COP–COM, etc.)
+- `batch_process.m`          — full pipeline driver over all 180 trials

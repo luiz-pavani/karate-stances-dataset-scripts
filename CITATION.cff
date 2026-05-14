@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this software or the associated dataset, please cite both as below."
+title: "karate-stances-dataset-scripts: Processing and analysis scripts for the karate stances biomechanical dataset"
+type: software
+authors:
+  - given-names: Luiz
+    family-names: Pavani
+    email: up202401900@up.pt
+    orcid: "https://orcid.org/0009-0009-4831-5160"
+    affiliation: "CIFI2D/LABIOMEP, Faculty of Sport, University of Porto"
+  - given-names: Johan Andrés
+    family-names: Robalino
+    affiliation: "CIFI2D/LABIOMEP, Faculty of Sport, University of Porto"
+  - given-names: Franciele
+    family-names: Parolini
+    affiliation: "CIFI2D/LABIOMEP, Faculty of Sport, University of Porto"
+  - given-names: Márcio
+    family-names: Goethel
+    affiliation: "CIFI2D/LABIOMEP, Faculty of Sport, University of Porto"
+  - given-names: J. Paulo
+    family-names: Vilas-Boas
+    affiliation: "CIFI2D/LABIOMEP, Faculty of Sport, University of Porto"
+repository-code: "https://github.com/luiz-pavani/karate-stances-dataset-scripts"
+license: MIT
+references:
+  - type: data
+    title: "A biomechanical dataset of fundamental karate-dō stances: Markerless kinematics and ground reaction forces in twelve karateka"
+    authors:
+      - given-names: Luiz
+        family-names: Pavani
+      - given-names: Johan Andrés
+        family-names: Robalino
+      - given-names: Franciele
+        family-names: Parolini
+      - given-names: Márcio
+        family-names: Goethel
+      - given-names: J. Paulo
+        family-names: Vilas-Boas
+    year: 2026
+    doi: "10.6084/m9.figshare.32288943"
+    url: "https://doi.org/10.6084/m9.figshare.32288943"
+    license: CC-BY-4.0
