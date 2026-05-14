@@ -1,7 +1,0 @@
-# Placeholder
-
-Python helpers land here. Planned modules:
-- `loader.py`           — read trial CSV → pandas DataFrame
-- `descriptors.py`      — per-window descriptor recomputation (Python parity with MATLAB pipeline)
-- `plots.py`            — quick-look plots (COP traces, BoS overlay, force timeseries)
-- `tests/`              — unit tests against `data/examples/`

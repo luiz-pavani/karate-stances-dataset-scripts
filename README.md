@@ -31,18 +31,42 @@ karate-stances-dataset-scripts/
 ├── LICENSE-DOCS               CC-BY 4.0 (applies to docs/ and README)
 ├── CITATION.cff               machine-readable citation metadata
 ├── CHANGELOG.md               release log
-├── .gitignore
+├── pyproject.toml             dependencies + pip-install configuration
 ├── src/
-│   ├── matlab/                MATLAB processing pipeline (Robalino/Parolini)
-│   └── python/                Python helpers for descriptor recomputation
+│   ├── matlab/                MATLAB parity port (planned)
+│   └── python/kds/            Python pipeline (loader, kinematics, descriptors, batch driver)
 ├── data/
-│   └── examples/              one example trial per stance (small, for testing scripts)
+│   ├── examples/              one example trial per stance (planned; for offline testing)
+│   └── processed_summary/     per-trial summary tables emitted by the released pipeline
 ├── docs/
 │   └── protocol.md            acquisition protocol summary
-└── figures/                   reproduced figures from the companion paper
+└── figures/                   diagnostic figures generated from the pipeline outputs
 ```
 
-The Figshare archive at the DOI above carries the full 180-trial dataset, raw and processed signals, per-trial summary descriptors (pre-strike 1–3 s window, post-strike 6–9 s window), and full subject metadata.
+The Figshare archive at the DOI above carries the full 180-trial dataset (raw + Theia-filtered C3D, kinetic CSVs, summary descriptors, metadata, docs); this repository carries the open Python pipeline that regenerates the descriptors from the raw archive.
+
+## Pipeline at a glance
+
+```
+$ pip install -e .                                       # install once
+$ python -m kds.batch \
+    --data-root "/path/to/Kinematic Data" \
+    --output-dir ./output                                # ~1 min on 189 trials
+```
+
+Outputs (in `--output-dir`):
+
+| File | Rows | Description |
+|---|---:|---|
+| `summary_all_trials.csv` | 180 | full descriptor panel per dynamic trial |
+| `summary_static.csv` | 9 | STATIC reference descriptors (`ID006`–`ID014`) |
+| `subject_means.csv` | 36 | per-subject means by base |
+| `qc_report.csv` | 189 | per-trial QC flags |
+| `pipeline_metadata.json` | — | pipeline version + run timestamp |
+
+The pipeline emits ~180 descriptors per trial: whole-body COM mean position, sway (ML/AP/Z range, RMS, path length) in the pre-strike (1–3 s) and post-strike (6–9 s) windows; joint angle means and ROMs for the 12 ISB joints × 3 axes in both windows; base-of-support width, depth, area, and centroid; cross-pipeline COM offset against Visual3D; and the detected `gyaku-tsuki` strike event (hand used, peak speed, peak time, onset time, return time).
+
+A sample pre-computed output is shipped in `data/processed_summary/`.
 
 ## Acquisition protocol
 

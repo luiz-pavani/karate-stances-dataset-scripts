@@ -32,6 +32,13 @@ data/processed/
 *.parquet
 *.h5
 
+# Pipeline run outputs (regenerate with `python -m kds.batch`)
+src/python/output/
+
+# But keep the per-trial summary tables under data/processed_summary/
+!data/processed_summary/
+!data/processed_summary/**
+
 # Figures (regenerated)
 figures/_generated/
 *.tmp.pdf
