@@ -1,0 +1,201 @@
+column,description,dtype
+subject,Participant code (ID003-ID014).,str
+base,"Postural base mechanic category: ZEN (anteriorised), KOK (posteriorised), KIB (lateralised).",str
+trial,Repetition index 1..5 within each base block.,int64
+filtered,True if Theia-filtered (pose_filt_0.c3d) variant was used.,bool
+rate_hz,"Kinematic sampling rate, Hz.",float64
+n_frames,Number of frames in the trial (1620 = 9.00 s at 180 Hz).,int64
+duration_s,Trial duration in seconds.,float64
+sex,Participant sex (M/F) used for gender-specific COM inertia.,str
+age_years,Age in years at acquisition.,int64
+height_cm,Stature in centimetres.,float64
+mass_kg,Body mass in kilograms.,float64
+bmi_kg_m2,Body mass index.,float64
+practice_years,Self-reported karate practice in years.,int64
+grade,Karate grade (kyu/dan or 'Branca' for white belt).,str
+style,Karate style lineage (Shotokan / Goju-Ryu / Wado-Ryu).,str
+modality,Primary competitive modality (Kata / Kumite / None).,str
+level,Competitive level (International / National / Regional / None).,str
+weekly_days,Self-reported training days per week.,int64
+weekly_hours,Self-reported training hours per week.,int64
+upper_dominant,Upper-limb dominance.,str
+lower_dominant,Lower-limb dominance.,str
+dominant_guard,Self-reported dominant fighting guard (left/right).,str
+pre_com_x_mean_m,Pre-strike (1-3 s) whole-body COM descriptor. x mean m,float64
+pre_com_y_mean_m,Pre-strike (1-3 s) whole-body COM descriptor. y mean m,float64
+pre_com_z_mean_m,Pre-strike (1-3 s) whole-body COM descriptor. z mean m,float64
+pre_com_ml_range_cm,Pre-strike (1-3 s) whole-body COM descriptor. ml range cm,float64
+pre_com_ap_range_cm,Pre-strike (1-3 s) whole-body COM descriptor. ap range cm,float64
+pre_com_z_range_cm,Pre-strike (1-3 s) whole-body COM descriptor. z range cm,float64
+pre_com_ml_rms_cm,Pre-strike (1-3 s) whole-body COM descriptor. ml rms cm,float64
+pre_com_ap_rms_cm,Pre-strike (1-3 s) whole-body COM descriptor. ap rms cm,float64
+pre_com_path_length_cm,Pre-strike (1-3 s) whole-body COM descriptor. path length cm,float64
+post_com_x_mean_m,Post-strike (6-9 s) whole-body COM descriptor. x mean m,float64
+post_com_y_mean_m,Post-strike (6-9 s) whole-body COM descriptor. y mean m,float64
+post_com_z_mean_m,Post-strike (6-9 s) whole-body COM descriptor. z mean m,float64
+post_com_ml_range_cm,Post-strike (6-9 s) whole-body COM descriptor. ml range cm,float64
+post_com_ap_range_cm,Post-strike (6-9 s) whole-body COM descriptor. ap range cm,float64
+post_com_z_range_cm,Post-strike (6-9 s) whole-body COM descriptor. z range cm,float64
+post_com_ml_rms_cm,Post-strike (6-9 s) whole-body COM descriptor. ml rms cm,float64
+post_com_ap_rms_cm,Post-strike (6-9 s) whole-body COM descriptor. ap rms cm,float64
+post_com_path_length_cm,Post-strike (6-9 s) whole-body COM descriptor. path length cm,float64
+pre_hip_right_flx_mean_deg,Pre-strike hip joint angle descriptor (deg). mean of right flx axis,float64
+pre_hip_right_flx_rom_deg,Pre-strike hip joint angle descriptor (deg). range of motion of right flx axis,float64
+pre_hip_right_abd_mean_deg,Pre-strike hip joint angle descriptor (deg). mean of right abd axis,float64
+pre_hip_right_abd_rom_deg,Pre-strike hip joint angle descriptor (deg). range of motion of right abd axis,float64
+pre_hip_right_rot_mean_deg,Pre-strike hip joint angle descriptor (deg). mean of right rot axis,float64
+pre_hip_right_rot_rom_deg,Pre-strike hip joint angle descriptor (deg). range of motion of right rot axis,float64
+pre_hip_left_flx_mean_deg,Pre-strike hip joint angle descriptor (deg). mean of left flx axis,float64
+pre_hip_left_flx_rom_deg,Pre-strike hip joint angle descriptor (deg). range of motion of left flx axis,float64
+pre_hip_left_abd_mean_deg,Pre-strike hip joint angle descriptor (deg). mean of left abd axis,float64
+pre_hip_left_abd_rom_deg,Pre-strike hip joint angle descriptor (deg). range of motion of left abd axis,float64
+pre_hip_left_rot_mean_deg,Pre-strike hip joint angle descriptor (deg). mean of left rot axis,float64
+pre_hip_left_rot_rom_deg,Pre-strike hip joint angle descriptor (deg). range of motion of left rot axis,float64
+pre_knee_right_flx_mean_deg,Pre-strike knee joint angle descriptor (deg). mean of right flx axis,float64
+pre_knee_right_flx_rom_deg,Pre-strike knee joint angle descriptor (deg). range of motion of right flx axis,float64
+pre_knee_right_abd_mean_deg,Pre-strike knee joint angle descriptor (deg). mean of right abd axis,float64
+pre_knee_right_abd_rom_deg,Pre-strike knee joint angle descriptor (deg). range of motion of right abd axis,float64
+pre_knee_right_rot_mean_deg,Pre-strike knee joint angle descriptor (deg). mean of right rot axis,float64
+pre_knee_right_rot_rom_deg,Pre-strike knee joint angle descriptor (deg). range of motion of right rot axis,float64
+pre_knee_left_flx_mean_deg,Pre-strike knee joint angle descriptor (deg). mean of left flx axis,float64
+pre_knee_left_flx_rom_deg,Pre-strike knee joint angle descriptor (deg). range of motion of left flx axis,float64
+pre_knee_left_abd_mean_deg,Pre-strike knee joint angle descriptor (deg). mean of left abd axis,float64
+pre_knee_left_abd_rom_deg,Pre-strike knee joint angle descriptor (deg). range of motion of left abd axis,float64
+pre_knee_left_rot_mean_deg,Pre-strike knee joint angle descriptor (deg). mean of left rot axis,float64
+pre_knee_left_rot_rom_deg,Pre-strike knee joint angle descriptor (deg). range of motion of left rot axis,float64
+pre_ankle_right_flx_mean_deg,Pre-strike ankle joint angle descriptor (deg). mean of right flx axis,float64
+pre_ankle_right_flx_rom_deg,Pre-strike ankle joint angle descriptor (deg). range of motion of right flx axis,float64
+pre_ankle_right_abd_mean_deg,Pre-strike ankle joint angle descriptor (deg). mean of right abd axis,float64
+pre_ankle_right_abd_rom_deg,Pre-strike ankle joint angle descriptor (deg). range of motion of right abd axis,float64
+pre_ankle_right_rot_mean_deg,Pre-strike ankle joint angle descriptor (deg). mean of right rot axis,float64
+pre_ankle_right_rot_rom_deg,Pre-strike ankle joint angle descriptor (deg). range of motion of right rot axis,float64
+pre_ankle_left_flx_mean_deg,Pre-strike ankle joint angle descriptor (deg). mean of left flx axis,float64
+pre_ankle_left_flx_rom_deg,Pre-strike ankle joint angle descriptor (deg). range of motion of left flx axis,float64
+pre_ankle_left_abd_mean_deg,Pre-strike ankle joint angle descriptor (deg). mean of left abd axis,float64
+pre_ankle_left_abd_rom_deg,Pre-strike ankle joint angle descriptor (deg). range of motion of left abd axis,float64
+pre_ankle_left_rot_mean_deg,Pre-strike ankle joint angle descriptor (deg). mean of left rot axis,float64
+pre_ankle_left_rot_rom_deg,Pre-strike ankle joint angle descriptor (deg). range of motion of left rot axis,float64
+pre_shoulder_right_flx_mean_deg,Pre-strike shoulder joint angle descriptor (deg). mean of right flx axis,float64
+pre_shoulder_right_flx_rom_deg,Pre-strike shoulder joint angle descriptor (deg). range of motion of right flx axis,float64
+pre_shoulder_right_abd_mean_deg,Pre-strike shoulder joint angle descriptor (deg). mean of right abd axis,float64
+pre_shoulder_right_abd_rom_deg,Pre-strike shoulder joint angle descriptor (deg). range of motion of right abd axis,float64
+pre_shoulder_right_rot_mean_deg,Pre-strike shoulder joint angle descriptor (deg). mean of right rot axis,float64
+pre_shoulder_right_rot_rom_deg,Pre-strike shoulder joint angle descriptor (deg). range of motion of right rot axis,float64
+pre_shoulder_left_flx_mean_deg,Pre-strike shoulder joint angle descriptor (deg). mean of left flx axis,float64
+pre_shoulder_left_flx_rom_deg,Pre-strike shoulder joint angle descriptor (deg). range of motion of left flx axis,float64
+pre_shoulder_left_abd_mean_deg,Pre-strike shoulder joint angle descriptor (deg). mean of left abd axis,float64
+pre_shoulder_left_abd_rom_deg,Pre-strike shoulder joint angle descriptor (deg). range of motion of left abd axis,float64
+pre_shoulder_left_rot_mean_deg,Pre-strike shoulder joint angle descriptor (deg). mean of left rot axis,float64
+pre_shoulder_left_rot_rom_deg,Pre-strike shoulder joint angle descriptor (deg). range of motion of left rot axis,float64
+pre_elbow_right_flx_mean_deg,Pre-strike elbow joint angle descriptor (deg). mean of right flx axis,float64
+pre_elbow_right_flx_rom_deg,Pre-strike elbow joint angle descriptor (deg). range of motion of right flx axis,float64
+pre_elbow_right_abd_mean_deg,Pre-strike elbow joint angle descriptor (deg). mean of right abd axis,float64
+pre_elbow_right_abd_rom_deg,Pre-strike elbow joint angle descriptor (deg). range of motion of right abd axis,float64
+pre_elbow_right_rot_mean_deg,Pre-strike elbow joint angle descriptor (deg). mean of right rot axis,float64
+pre_elbow_right_rot_rom_deg,Pre-strike elbow joint angle descriptor (deg). range of motion of right rot axis,float64
+pre_elbow_left_flx_mean_deg,Pre-strike elbow joint angle descriptor (deg). mean of left flx axis,float64
+pre_elbow_left_flx_rom_deg,Pre-strike elbow joint angle descriptor (deg). range of motion of left flx axis,float64
+pre_elbow_left_abd_mean_deg,Pre-strike elbow joint angle descriptor (deg). mean of left abd axis,float64
+pre_elbow_left_abd_rom_deg,Pre-strike elbow joint angle descriptor (deg). range of motion of left abd axis,float64
+pre_elbow_left_rot_mean_deg,Pre-strike elbow joint angle descriptor (deg). mean of left rot axis,float64
+pre_elbow_left_rot_rom_deg,Pre-strike elbow joint angle descriptor (deg). range of motion of left rot axis,float64
+pre_pelvis_world_flx_mean_deg,Pre-strike pelvis-world Cardan angle descriptor (deg). mean of  flx axis,float64
+pre_pelvis_world_flx_rom_deg,Pre-strike pelvis-world Cardan angle descriptor (deg). range of motion of  flx axis,float64
+pre_pelvis_world_abd_mean_deg,Pre-strike pelvis-world Cardan angle descriptor (deg). mean of  abd axis,float64
+pre_pelvis_world_abd_rom_deg,Pre-strike pelvis-world Cardan angle descriptor (deg). range of motion of  abd axis,float64
+pre_pelvis_world_rot_mean_deg,Pre-strike pelvis-world Cardan angle descriptor (deg). mean of  rot axis,float64
+pre_pelvis_world_rot_rom_deg,Pre-strike pelvis-world Cardan angle descriptor (deg). range of motion of  rot axis,float64
+pre_trunk_flx_mean_deg,Pre-strike trunk-vs-pelvis Cardan angle descriptor (deg). mean of flx axis,float64
+pre_trunk_flx_rom_deg,Pre-strike trunk-vs-pelvis Cardan angle descriptor (deg). range of motion of flx axis,float64
+pre_trunk_abd_mean_deg,Pre-strike trunk-vs-pelvis Cardan angle descriptor (deg). mean of abd axis,float64
+pre_trunk_abd_rom_deg,Pre-strike trunk-vs-pelvis Cardan angle descriptor (deg). range of motion of abd axis,float64
+pre_trunk_rot_mean_deg,Pre-strike trunk-vs-pelvis Cardan angle descriptor (deg). mean of rot axis,float64
+pre_trunk_rot_rom_deg,Pre-strike trunk-vs-pelvis Cardan angle descriptor (deg). range of motion of rot axis,float64
+post_hip_right_flx_mean_deg,Post-strike hip joint angle descriptor (deg). mean of right flx axis,float64
+post_hip_right_flx_rom_deg,Post-strike hip joint angle descriptor (deg). range of motion of right flx axis,float64
+post_hip_right_abd_mean_deg,Post-strike hip joint angle descriptor (deg). mean of right abd axis,float64
+post_hip_right_abd_rom_deg,Post-strike hip joint angle descriptor (deg). range of motion of right abd axis,float64
+post_hip_right_rot_mean_deg,Post-strike hip joint angle descriptor (deg). mean of right rot axis,float64
+post_hip_right_rot_rom_deg,Post-strike hip joint angle descriptor (deg). range of motion of right rot axis,float64
+post_hip_left_flx_mean_deg,Post-strike hip joint angle descriptor (deg). mean of left flx axis,float64
+post_hip_left_flx_rom_deg,Post-strike hip joint angle descriptor (deg). range of motion of left flx axis,float64
+post_hip_left_abd_mean_deg,Post-strike hip joint angle descriptor (deg). mean of left abd axis,float64
+post_hip_left_abd_rom_deg,Post-strike hip joint angle descriptor (deg). range of motion of left abd axis,float64
+post_hip_left_rot_mean_deg,Post-strike hip joint angle descriptor (deg). mean of left rot axis,float64
+post_hip_left_rot_rom_deg,Post-strike hip joint angle descriptor (deg). range of motion of left rot axis,float64
+post_knee_right_flx_mean_deg,Post-strike knee joint angle descriptor (deg). mean of right flx axis,float64
+post_knee_right_flx_rom_deg,Post-strike knee joint angle descriptor (deg). range of motion of right flx axis,float64
+post_knee_right_abd_mean_deg,Post-strike knee joint angle descriptor (deg). mean of right abd axis,float64
+post_knee_right_abd_rom_deg,Post-strike knee joint angle descriptor (deg). range of motion of right abd axis,float64
+post_knee_right_rot_mean_deg,Post-strike knee joint angle descriptor (deg). mean of right rot axis,float64
+post_knee_right_rot_rom_deg,Post-strike knee joint angle descriptor (deg). range of motion of right rot axis,float64
+post_knee_left_flx_mean_deg,Post-strike knee joint angle descriptor (deg). mean of left flx axis,float64
+post_knee_left_flx_rom_deg,Post-strike knee joint angle descriptor (deg). range of motion of left flx axis,float64
+post_knee_left_abd_mean_deg,Post-strike knee joint angle descriptor (deg). mean of left abd axis,float64
+post_knee_left_abd_rom_deg,Post-strike knee joint angle descriptor (deg). range of motion of left abd axis,float64
+post_knee_left_rot_mean_deg,Post-strike knee joint angle descriptor (deg). mean of left rot axis,float64
+post_knee_left_rot_rom_deg,Post-strike knee joint angle descriptor (deg). range of motion of left rot axis,float64
+post_ankle_right_flx_mean_deg,Post-strike ankle joint angle descriptor (deg). mean of right flx axis,float64
+post_ankle_right_flx_rom_deg,Post-strike ankle joint angle descriptor (deg). range of motion of right flx axis,float64
+post_ankle_right_abd_mean_deg,Post-strike ankle joint angle descriptor (deg). mean of right abd axis,float64
+post_ankle_right_abd_rom_deg,Post-strike ankle joint angle descriptor (deg). range of motion of right abd axis,float64
+post_ankle_right_rot_mean_deg,Post-strike ankle joint angle descriptor (deg). mean of right rot axis,float64
+post_ankle_right_rot_rom_deg,Post-strike ankle joint angle descriptor (deg). range of motion of right rot axis,float64
+post_ankle_left_flx_mean_deg,Post-strike ankle joint angle descriptor (deg). mean of left flx axis,float64
+post_ankle_left_flx_rom_deg,Post-strike ankle joint angle descriptor (deg). range of motion of left flx axis,float64
+post_ankle_left_abd_mean_deg,Post-strike ankle joint angle descriptor (deg). mean of left abd axis,float64
+post_ankle_left_abd_rom_deg,Post-strike ankle joint angle descriptor (deg). range of motion of left abd axis,float64
+post_ankle_left_rot_mean_deg,Post-strike ankle joint angle descriptor (deg). mean of left rot axis,float64
+post_ankle_left_rot_rom_deg,Post-strike ankle joint angle descriptor (deg). range of motion of left rot axis,float64
+post_shoulder_right_flx_mean_deg,Post-strike shoulder joint angle descriptor (deg). mean of right flx axis,float64
+post_shoulder_right_flx_rom_deg,Post-strike shoulder joint angle descriptor (deg). range of motion of right flx axis,float64
+post_shoulder_right_abd_mean_deg,Post-strike shoulder joint angle descriptor (deg). mean of right abd axis,float64
+post_shoulder_right_abd_rom_deg,Post-strike shoulder joint angle descriptor (deg). range of motion of right abd axis,float64
+post_shoulder_right_rot_mean_deg,Post-strike shoulder joint angle descriptor (deg). mean of right rot axis,float64
+post_shoulder_right_rot_rom_deg,Post-strike shoulder joint angle descriptor (deg). range of motion of right rot axis,float64
+post_shoulder_left_flx_mean_deg,Post-strike shoulder joint angle descriptor (deg). mean of left flx axis,float64
+post_shoulder_left_flx_rom_deg,Post-strike shoulder joint angle descriptor (deg). range of motion of left flx axis,float64
+post_shoulder_left_abd_mean_deg,Post-strike shoulder joint angle descriptor (deg). mean of left abd axis,float64
+post_shoulder_left_abd_rom_deg,Post-strike shoulder joint angle descriptor (deg). range of motion of left abd axis,float64
+post_shoulder_left_rot_mean_deg,Post-strike shoulder joint angle descriptor (deg). mean of left rot axis,float64
+post_shoulder_left_rot_rom_deg,Post-strike shoulder joint angle descriptor (deg). range of motion of left rot axis,float64
+post_elbow_right_flx_mean_deg,Post-strike elbow joint angle descriptor (deg). mean of right flx axis,float64
+post_elbow_right_flx_rom_deg,Post-strike elbow joint angle descriptor (deg). range of motion of right flx axis,float64
+post_elbow_right_abd_mean_deg,Post-strike elbow joint angle descriptor (deg). mean of right abd axis,float64
+post_elbow_right_abd_rom_deg,Post-strike elbow joint angle descriptor (deg). range of motion of right abd axis,float64
+post_elbow_right_rot_mean_deg,Post-strike elbow joint angle descriptor (deg). mean of right rot axis,float64
+post_elbow_right_rot_rom_deg,Post-strike elbow joint angle descriptor (deg). range of motion of right rot axis,float64
+post_elbow_left_flx_mean_deg,Post-strike elbow joint angle descriptor (deg). mean of left flx axis,float64
+post_elbow_left_flx_rom_deg,Post-strike elbow joint angle descriptor (deg). range of motion of left flx axis,float64
+post_elbow_left_abd_mean_deg,Post-strike elbow joint angle descriptor (deg). mean of left abd axis,float64
+post_elbow_left_abd_rom_deg,Post-strike elbow joint angle descriptor (deg). range of motion of left abd axis,float64
+post_elbow_left_rot_mean_deg,Post-strike elbow joint angle descriptor (deg). mean of left rot axis,float64
+post_elbow_left_rot_rom_deg,Post-strike elbow joint angle descriptor (deg). range of motion of left rot axis,float64
+post_pelvis_world_flx_mean_deg,Post-strike pelvis-world Cardan angle descriptor (deg). mean of  flx axis,float64
+post_pelvis_world_flx_rom_deg,Post-strike pelvis-world Cardan angle descriptor (deg). range of motion of  flx axis,float64
+post_pelvis_world_abd_mean_deg,Post-strike pelvis-world Cardan angle descriptor (deg). mean of  abd axis,float64
+post_pelvis_world_abd_rom_deg,Post-strike pelvis-world Cardan angle descriptor (deg). range of motion of  abd axis,float64
+post_pelvis_world_rot_mean_deg,Post-strike pelvis-world Cardan angle descriptor (deg). mean of  rot axis,float64
+post_pelvis_world_rot_rom_deg,Post-strike pelvis-world Cardan angle descriptor (deg). range of motion of  rot axis,float64
+post_trunk_flx_mean_deg,Post-strike trunk-vs-pelvis Cardan angle descriptor (deg). mean of flx axis,float64
+post_trunk_flx_rom_deg,Post-strike trunk-vs-pelvis Cardan angle descriptor (deg). range of motion of flx axis,float64
+post_trunk_abd_mean_deg,Post-strike trunk-vs-pelvis Cardan angle descriptor (deg). mean of abd axis,float64
+post_trunk_abd_rom_deg,Post-strike trunk-vs-pelvis Cardan angle descriptor (deg). range of motion of abd axis,float64
+post_trunk_rot_mean_deg,Post-strike trunk-vs-pelvis Cardan angle descriptor (deg). mean of rot axis,float64
+post_trunk_rot_rom_deg,Post-strike trunk-vs-pelvis Cardan angle descriptor (deg). range of motion of rot axis,float64
+v3d_com_offset_norm_mm,Cross-pipeline validation against Visual3D. com offset norm mm,float64
+bos_width_ml_cm,Base-of-support descriptor (from Visual3D foot landmarks). width ml cm,float64
+bos_depth_ap_cm,Base-of-support descriptor (from Visual3D foot landmarks). depth ap cm,float64
+bos_area_cm2,Base-of-support descriptor (from Visual3D foot landmarks). area cm2,float64
+bos_centroid_x,Base-of-support descriptor (from Visual3D foot landmarks). centroid x,float64
+bos_centroid_y,Base-of-support descriptor (from Visual3D foot landmarks). centroid y,float64
+strike_hand,Detected gyaku-tsuki strike event. hand,str
+strike_peak_speed_mps,Detected gyaku-tsuki strike event. peak speed mps,float64
+strike_peak_time_s,Detected gyaku-tsuki strike event. peak time s,float64
+strike_onset_time_s,Detected gyaku-tsuki strike event. onset time s,float64
+strike_return_time_s,Detected gyaku-tsuki strike event. return time s,float64
+com_height_norm_by_height,Pre-strike mean COM Z divided by participant height (dimensionless).,float64
+bos_area_norm_by_height_sq_pct,BoS area as percentage of (participant height)^2.,float64
+bos_width_norm_by_height_pct,BoS mediolateral width as percentage of participant height.,float64
+bos_depth_norm_by_height_pct,BoS anteroposterior depth as percentage of participant height.,float64
+strike_peak_speed_norm_by_height_sqrt,Strike peak speed (m/s) divided by sqrt(height in m).,float64
