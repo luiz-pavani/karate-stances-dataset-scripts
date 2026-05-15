@@ -7,9 +7,25 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ## [Unreleased]
 
 ### Planned
-- Integration of the matched force-platform records (kinetic stream): COP per platform, force-weighted combined COP, COP–COM distance, Margin of Stability (Hof et al., 2005), Relative Stability Radius.
 - Worked-example data in `data/examples/` (one trial per stance) so users can test the pipeline without downloading the full Figshare archive.
 - MATLAB parity port of the Python pipeline (`src/matlab/`).
+
+## [0.4.0] — 2026-05-15
+
+### Added
+- **`kds.loader_kinetic`** module — reads Bertec force-platform TSV files exported by Qualisys QTM. Handles the 11-column variant (subjects `ID003`–`ID004`) and the 9-column variant (subjects `ID005`–`ID014`) transparently; resolves the `KUK→KOK` acquisition-time typo for `ID009`; parses the 26-line metadata header including 4-corner plate geometry in the laboratory frame.
+- **`kds.export_kinetic_timeseries`** module — exports one CSV per trial with the unprocessed force-platform records of both Bertec 3 and Bertec 4 platforms side-by-side at the native 1000 Hz sampling.
+  - 192 trial CSVs total: 180 dynamic at 9 000 frames × 20 columns + 12 STATIC at variable frames × 20 columns.
+  - Each CSV carries `frame`, `time_s`, and a 9-column block per platform (`FP3_Fx_N`, `FP3_Fy_N`, `FP3_Fz_N`, `FP3_Mx_Nmm`, `FP3_My_Nmm`, `FP3_Mz_Nmm`, `FP3_COPx_mm`, `FP3_COPy_mm`, `FP3_COPz_mm` and the same six for FP4).
+  - **No filtering, no platform combination, no descriptors, no demographic metadata.** Force, moment, and COP released exactly as exported by Qualisys QTM in the laboratory frame.
+  - Five trials with only one platform that fired are retained, with the absent platform's columns filled with `NaN`s. The full record is in the released QC report.
+  - Auxiliary tables: `kinetic_qc_report.csv` (192 rows × 12 cols) flags per-trial completeness; `kinetic_plate_corners.csv` (1 516 rows × 7 cols) provides the laboratory-frame corner coordinates of each plate per trial.
+  - CLI: `python -m kds.export_kinetic_timeseries --data-root <path> --output-dir <out>`.
+- `data/timeseries_kinetic_raw/README.md` — schema documentation including the explicit Bertec sign convention (negative `Fz` under body weight; moments are *free* moments about the plate centre).
+
+### Notes
+- Body-weight cross-check (sanity, not used by the pipeline): for participant `ID003`, the mean of `FP3_Fz + FP4_Fz` across a representative `ZEN` trial is −687.78 N versus an expected −678.85 N from declared body mass — a 1.3 % offset consistent with day-of-acquisition mass variation and footwear.
+- The 322 MB per-trial kinetic CSV archive is **not** committed to Git for the same reason as the kinematic archive: it is regenerable from the released pipeline and is intended for the Figshare release at the dataset DOI [10.6084/m9.figshare.32288943](https://doi.org/10.6084/m9.figshare.32288943). The QC report and plate-corners table are small (~30 KB total) and *are* tracked in the repo so the QC record is auditable without downloading the bulk data.
 
 ## [0.3.0] — 2026-05-15
 

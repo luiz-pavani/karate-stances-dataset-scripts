@@ -68,7 +68,7 @@ The pipeline emits ~180 descriptors per trial: whole-body COM mean position, swa
 
 A sample pre-computed output is shipped in `data/processed_summary/`.
 
-### Per-trial raw time-series export
+### Per-trial raw time-series export — kinematic
 
 For users who want the unaggregated per-frame signals (segment positions,
 COM position, joint angles) without any descriptors or demographic
@@ -86,6 +86,28 @@ looked up internally — not written into the CSV), and the Cardan/Euler
 angles of the 12 ISB joints × 3 axes (deg). 180 dynamic trials carry
 1620 frames each; 9 STATIC reference trials sit under `static/`. See
 `data/timeseries_raw/README.md` for the full schema.
+
+### Per-trial raw time-series export — kinetic
+
+The matched force-platform records are released as raw, unfiltered
+1000 Hz signals from the two Bertec FP4060-15 platforms:
+
+```
+$ python -m kds.export_kinetic_timeseries \
+    --data-root "/path/to/Kinetic" \
+    --output-dir ./data/timeseries_kinetic_raw  # default
+```
+
+Each CSV has 20 columns: `frame`, `time_s`, and a 9-column block per
+platform (`FP3_Fx_N`, `FP3_Fy_N`, `FP3_Fz_N`, `FP3_Mx_Nmm`, `FP3_My_Nmm`,
+`FP3_Mz_Nmm`, `FP3_COPx_mm`, `FP3_COPy_mm`, `FP3_COPz_mm` plus the same
+six for FP4). 180 dynamic trials at 9 000 frames each; 12 STATIC
+references under `static/`. **No filtering, no platform combination, no
+descriptor extraction.** Force, moment, and COP are released exactly as
+exported by Qualisys QTM in the laboratory frame. See
+`data/timeseries_kinetic_raw/README.md` for the schema including the
+Bertec sign convention and the QC report on per-trial platform
+completeness.
 
 ## Acquisition protocol
 

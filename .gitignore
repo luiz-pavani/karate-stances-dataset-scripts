@@ -45,6 +45,12 @@ src/python/output/
 data/timeseries_raw/*.csv
 data/timeseries_raw/static/*.csv
 
+# Raw per-trial kinetic CSVs (regenerate with `python -m kds.export_kinetic_timeseries`)
+# Same rationale as the kinematic archive: heavy data lives on Figshare.
+# The QC report and plate-corners table are small and kept tracked.
+data/timeseries_kinetic_raw/ID*.csv
+data/timeseries_kinetic_raw/static/*.csv
+
 # Figures (regenerated)
 figures/_generated/
 *.tmp.pdf

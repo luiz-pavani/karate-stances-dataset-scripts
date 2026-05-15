@@ -7,4 +7,5 @@ and the data paper Pavani et al. (in preparation, target *Scientific Data*).
 
 __version__ = "0.2.0"
 __all__ = ["loader", "kinematics_linear", "kinematics_angular",
-           "strike_detection", "descriptors", "batch", "export_timeseries"]
+           "strike_detection", "descriptors", "batch", "export_timeseries",
+           "loader_kinetic", "export_kinetic_timeseries"]
