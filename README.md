@@ -68,6 +68,25 @@ The pipeline emits ~180 descriptors per trial: whole-body COM mean position, swa
 
 A sample pre-computed output is shipped in `data/processed_summary/`.
 
+### Per-trial raw time-series export
+
+For users who want the unaggregated per-frame signals (segment positions,
+COM position, joint angles) without any descriptors or demographic
+metadata, a second entry point emits one CSV per trial:
+
+```
+$ python -m kds.export_timeseries \
+    --data-root "/path/to/Kinematic Data" \
+    --output-dir ./data/timeseries_raw          # default; ~1 min on 189 trials
+```
+
+Each CSV has 98 columns: `frame`, `time_s`, the linear position of the
+19 segment origins (m), the whole-body COM (m, sex-specific inertia
+looked up internally — not written into the CSV), and the Cardan/Euler
+angles of the 12 ISB joints × 3 axes (deg). 180 dynamic trials carry
+1620 frames each; 9 STATIC reference trials sit under `static/`. See
+`data/timeseries_raw/README.md` for the full schema.
+
 ## Acquisition protocol
 
 Each participant executed five repetitions of *gyaku-tsuki* from each of the three bases. The full nine-second trial structure is:

@@ -39,6 +39,12 @@ src/python/output/
 !data/processed_summary/
 !data/processed_summary/**
 
+# Raw per-trial time-series CSVs (regenerate with `python -m kds.export_timeseries`)
+# The full per-trial archive lives on Figshare (DOI 10.6084/m9.figshare.32288943);
+# only the schema README is tracked here so users know what the layout looks like.
+data/timeseries_raw/*.csv
+data/timeseries_raw/static/*.csv
+
 # Figures (regenerated)
 figures/_generated/
 *.tmp.pdf

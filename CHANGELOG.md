@@ -11,6 +11,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Worked-example data in `data/examples/` (one trial per stance) so users can test the pipeline without downloading the full Figshare archive.
 - MATLAB parity port of the Python pipeline (`src/matlab/`).
 
+## [0.3.0] — 2026-05-15
+
+### Added
+- **`kds.export_timeseries`** module — extracts per-trial pure kinematic time-series CSVs (no aggregated descriptors, no demographic columns) from the raw Theia3D C3D archive.
+  - One CSV per trial, 98 columns each: `frame`, `time_s`, linear position of the 19 segment origins (m), whole-body COM (m, sex-specific inertia looked up internally), and Cardan/Euler joint angles of the 12 ISB joints (deg).
+  - Dynamic trials (180 files): `data/timeseries_raw/<ID>_<BASE>_T<N>_kinematics.csv` × 1620 frames.
+  - STATIC references (9 files): `data/timeseries_raw/static/<ID>_STATIC_T1_kinematics.csv` × variable frames.
+  - Default input is the **raw** `*_pose_0.c3d` (use `--filtered` for the Theia-filtered variant).
+  - CLI: `python -m kds.export_timeseries --data-root <path> --output-dir <out>`.
+- `data/timeseries_raw/README.md` — schema documentation for the per-trial CSVs.
+
+### Notes
+- The 260 MB per-trial CSV archive is **not** committed to Git; it is regenerable from the released pipeline. The full archive is intended for the Figshare release at the dataset DOI [10.6084/m9.figshare.32288943](https://doi.org/10.6084/m9.figshare.32288943). The schema README is tracked in the repo so that the layout is discoverable without downloading the archive.
+
 ## [0.2.0] — 2026-05-14
 
 ### Added
