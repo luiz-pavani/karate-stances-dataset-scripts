@@ -31,10 +31,10 @@ class Subject:
 
 SUBJECTS: dict[str, Subject] = {
     "ID003": Subject("ID003", "M", 22, 158.5, 69.2, 27.7, 17, "3 Dan", "Goju-Ryu", "Kata", "International", 1, 1, "Right", "Right", "Left"),
-    "ID004": Subject("ID004", "M", 23, 170.5, 104.4, 36.1, 13, "1 Dan", "Wado-Ryu", "Kumite", "Regional", 1, 1, "Right", "Left", "Left"),
+    "ID004": Subject("ID004", "M", 23, 170.5, 104.4, 36.1, 13, "1 Dan", "Shotokan", "Kumite", "Regional", 1, 1, "Right", "Left", "Left"),
     "ID005": Subject("ID005", "M", 21, 167.5, 70.9, 25.4, 13, "1 Dan", "Shotokan", "Kumite", "International", 1, 1, "Right", "Left", "Left"),
     "ID006": Subject("ID006", "F", 22, 158.0, 56.6, 22.7, 10, "1 Dan", "Goju-Ryu", "Kumite", "International", 2, 1, "Right", "Right", "Left"),
-    "ID007": Subject("ID007", "F", 20, 165.0, 72.5, 17.9, 15, "1 Dan", "Goju-Ryu", "Kata", "International", 3, 4, "Right", "Right", "Left"),
+    "ID007": Subject("ID007", "F", 20, 165.0, 72.5, 26.6, 15, "1 Dan", "Goju-Ryu", "Kata", "International", 3, 4, "Right", "Right", "Left"),
     "ID008": Subject("ID008", "F", 19, 155.0, 52.9, 22.0, 15, "1 Dan", "Goju-Ryu", "Kata", "International", 6, 12, "Right", "Right", "Left"),
     "ID009": Subject("ID009", "F", 20, 155.0, 72.2, 30.1, 12, "1 Dan", "Shotokan", "Kata", "National", 3, 4, "Right", "Right", "Left"),
     "ID010": Subject("ID010", "F", 20, 161.5, 70.7, 27.3, 15, "1 Dan", "Shotokan", "Kumite", "International", 5, 8, "Right", "Right", "Left"),

@@ -51,8 +51,13 @@ exceptions documented in the QC report). STATIC references are shorter
 ### Sign convention
 
 The Qualisys export expresses forces and centres of pressure in the
-**laboratory** coordinate frame: X mediolateral, Y anteroposterior, Z
-vertical (upward positive). A standing participant therefore produces a
+**laboratory** coordinate frame: X, Y horizontal, Z vertical (upward
+positive). The anatomical meaning of X and Y is **stance-dependent**:
+`ZEN` and `KOK` trials were performed facing lab +Y (X = mediolateral,
+Y = anteroposterior), whereas `KIB` trials were performed facing lab +X
+(X = anteroposterior, Y = mediolateral) — verified against the
+gyaku-tsuki punch direction in all 180 dynamic trials. A standing
+participant produces a
 **negative `Fz`** (the platform sees a downward reaction force). The
 moment vector is the **free moment** of the centre of pressure about the
 plate's geometric centre — i.e. *not* the full moment vector at the

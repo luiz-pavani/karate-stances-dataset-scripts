@@ -32,6 +32,19 @@ from .kinematics_angular import joint_angles, angular_range_of_motion
 PRE_STRIKE_WIN = (1.0, 3.0)
 POST_STRIKE_WIN = (6.0, 9.0)
 
+# Anatomical axis mapping is stance-dependent (verified against the gyaku-tsuki
+# punch direction in all 180 dynamic trials): ZEN and KOK are performed facing
+# lab +Y (lab X = mediolateral, lab Y = anteroposterior), whereas KIB is
+# performed facing lab +X (lab X = anteroposterior, lab Y = mediolateral).
+LAB_X_IS_AP_BASES = frozenset({"KIB"})
+
+
+def _axis_indices(base: str) -> tuple[int, int]:
+    """Return (ml_index, ap_index) into a lab-frame (x, y, z) array for a stance."""
+    if base in LAB_X_IS_AP_BASES:
+        return 1, 0
+    return 0, 1
+
 
 def _window_slice(time: np.ndarray, t0: float, t1: float) -> slice:
     """Return a slice of the time axis between t0 and t1 (inclusive)."""
@@ -50,7 +63,7 @@ def _path_length_2d(x: np.ndarray, y: np.ndarray) -> float:
     return float(np.sum(np.sqrt(np.diff(x) ** 2 + np.diff(y) ** 2)))
 
 
-def _bos_from_pos_df(df: pd.DataFrame, window: slice) -> dict:
+def _bos_from_pos_df(df: pd.DataFrame, window: slice, base: str) -> dict:
     """Compute base-of-support descriptors from the Visual3D POS export.
 
     The four key landmarks per foot are:
@@ -79,8 +92,12 @@ def _bos_from_pos_df(df: pd.DataFrame, window: slice) -> dict:
     # Mean across frames (feet are stationary in the held stance)
     xs = pts_x.mean(axis=1)
     ys = pts_y.mean(axis=1)
-    width_ml = float(np.ptp(xs))     # peak-to-peak in x
-    depth_ap = float(np.ptp(ys))     # peak-to-peak in y
+    if base in LAB_X_IS_AP_BASES:
+        width_ml = float(np.ptp(ys))
+        depth_ap = float(np.ptp(xs))
+    else:
+        width_ml = float(np.ptp(xs))
+        depth_ap = float(np.ptp(ys))
     # Area: convex-hull area would be most accurate; we approximate with the
     # rectangular bounding box for robustness when the points are nearly
     # collinear (as in stances with one foot in front of the other).
@@ -95,12 +112,14 @@ def _bos_from_pos_df(df: pd.DataFrame, window: slice) -> dict:
     )
 
 
-def _com_descriptors(com: np.ndarray, window: slice, prefix: str) -> dict:
+def _com_descriptors(com: np.ndarray, window: slice, prefix: str,
+                     base: str) -> dict:
     """COM position + sway descriptors within a window."""
     com_w = com[:, window]
     mean = com_w.mean(axis=1)
-    ml = com_w[0]
-    ap = com_w[1]
+    i_ml, i_ap = _axis_indices(base)
+    ml = com_w[i_ml]
+    ap = com_w[i_ap]
     z = com_w[2]
     return {
         f"{prefix}_com_x_mean_m": float(mean[0]),
@@ -171,8 +190,8 @@ def trial_descriptors(record: TrialRecord, sex: str,
         "sex": sex,
     }
 
-    out.update(_com_descriptors(com, pre, "pre"))
-    out.update(_com_descriptors(com, post, "post"))
+    out.update(_com_descriptors(com, pre, "pre", record.base))
+    out.update(_com_descriptors(com, post, "post", record.base))
     out.update(_joint_descriptors(angles, pre, "pre"))
     out.update(_joint_descriptors(angles, post, "post"))
 
@@ -183,7 +202,7 @@ def trial_descriptors(record: TrialRecord, sex: str,
         n = min(v3d_com.shape[1], record.n_frames)
         diff = com[:, :n] - v3d_com[:, :n]
         out["v3d_com_offset_norm_mm"] = float(np.linalg.norm(diff, axis=0).mean()) * 1000.0
-        out.update(_bos_from_pos_df(pos_df, pre))
+        out.update(_bos_from_pos_df(pos_df, pre, record.base))
 
     if strike_event is not None:
         out.update({

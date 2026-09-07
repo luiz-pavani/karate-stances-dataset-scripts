@@ -1,6 +1,6 @@
 [project]
 name = "karate-stances-pipeline"
-version = "0.2.0"
+version = "0.5.0"
 description = "Processing and analysis pipeline for the karate stances biomechanical dataset (DOI 10.6084/m9.figshare.32288943)"
 readme = "README.md"
 authors = [

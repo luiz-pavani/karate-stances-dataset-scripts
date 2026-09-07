@@ -4,6 +4,36 @@ All notable changes to this repository will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0] — 2026-09-07
+
+### Fixed
+- **Stance-dependent anatomical axis mapping (KIB label correction).** The
+  descriptor pipeline assigned lab X = mediolateral and lab Y = anteroposterior
+  to every stance. That mapping is correct for `ZEN` and `KOK` (performed
+  facing lab +Y) but inverted for `KIB` (performed facing lab +X) — verified
+  against the gyaku-tsuki punch direction in all 180 dynamic trials.
+  `kds.descriptors` now maps ML/AP per stance (`LAB_X_IS_AP_BASES`).
+- Derived tables (`KDS_summary_all_trials.csv`, `KDS_subject_means.csv`,
+  `kinematic_analysis_wide.csv`, `kinematic_analysis_long.csv`) regenerated
+  with the corrected mapping: **pure label permutation on the `KIB` rows**
+  (ML↔AP descriptor pairs, including the height-normalised BoS columns);
+  all values unchanged; `ZEN`/`KOK` rows byte-identical.
+- Diagnostic figures regenerated from the corrected tables
+  (`bos_by_stance.png`, `com_descriptors_by_stance.png`).
+- Coordinate-frame statements in `data/timeseries_raw/README.md` and
+  `data/timeseries_kinetic_raw/README.md` corrected: the raw time-series are
+  and always were lab-frame (values untouched); the anatomical reading of
+  X/Y is stance-dependent and is now documented per stance.
+- Subject metadata corrections in `kds.demographics` and `KDS_Info`:
+  ID004 style Wadō-ryū → Shōtōkan (cohort is 7 Shōtōkan + 5 Gōjū-ryū) and
+  ID007 BMI 17.9 → 26.6 (arithmetic: 72.5 kg / 1.65 m²).
+
+### Added
+- Dataset-release documentation staged for the Figshare archive:
+  `README_DATASET.md`, `PROCEDURE_REPORT.md`, `KDS_Info.csv`/`.xlsx`, and
+  two illustrative figures (`bertec_fp_traces_example.png`,
+  `theia_skeleton_snapshots.png`).
+
 ## [Unreleased]
 
 ### Planned

@@ -68,8 +68,24 @@ Axial (Z-X-Y Cardan sequence): `pelvis_world`, `trunk`.
 ## Coordinate frame
 
 The laboratory frame is the one set by the Qualisys system at the time of
-acquisition: X mediolateral, Y anteroposterior, Z vertical (upward
-positive). Units are SI (m, s, deg).
+acquisition: X, Y horizontal, Z vertical (upward positive). Units are SI
+(m, s, deg).
+
+**The anatomical meaning of the two horizontal axes is stance-dependent**,
+because the stances were not all performed facing the same laboratory
+direction (verified against the gyaku-tsuki punch direction in all 180
+dynamic trials):
+
+| Stance | Facing | lab X | lab Y |
+|---|---|---|---|
+| `ZEN`, `KOK` | lab +Y | mediolateral | anteroposterior |
+| `KIB` | lab +X | anteroposterior | mediolateral |
+
+Any analysis that assigns anatomical labels to lab X/Y must apply this
+mapping per stance (as `kds.descriptors` does). An earlier release of the
+summary tables applied X = mediolateral to all stances, which mislabelled
+the `KIB` rows; this was corrected in v0.5.0 (values unchanged — pure
+label permutation, see `CHANGELOG.md`).
 
 ## Regeneration
 

@@ -70,7 +70,7 @@ def run_pipeline(data_root: str | Path, output_dir: str | Path,
                     "n_frames": rec.n_frames, "duration_s": float(rec.time[-1]),
                     "sex": subj.sex,
                 }
-                row.update(_com_descriptors(com, full, "static"))
+                row.update(_com_descriptors(com, full, "static", rec.base))
                 rows_static.append(row)
                 qc["status"] = "ok"
             else:

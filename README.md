@@ -18,7 +18,7 @@ It contains synchronised force-platform (two Bertec FP4060-15, 1000 Hz) and mark
 | `KOK` | posteriorised | *kōkutsu-dachi* | *neko-ashi-dachi* |
 | `KIB` | lateralised | *kiba-dachi* | *shiko-dachi* |
 
-Cohort: 4 male + 8 female; 91.7 % black belt; 66.7 % international competitors; 6 Shōtōkan + 5 Gōjū-ryū + 1 Wadō-ryū.
+Cohort: 4 male + 8 female; 91.7 % black belt; 66.7 % international competitors; 7 Shōtōkan + 5 Gōjū-ryū.
 
 ## What this repo contains
 

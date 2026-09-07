@@ -1,0 +1,193 @@
+trial_id,subject_id,trial_type,base_code,base_description,canonical_name_shotokan,stylistic_name_executed,trial_number,sex,age_years,height_cm,mass_kg,bmi,practice_years,grade,karate_style,competition_modality,competition_level,training_days_per_week,training_hours_per_week,upper_dominant,lower_dominant,dominant_guard
+ID003_ZEN_T1,ID003,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,1,M,22,158.5,69.2,27.7,17,3 Dan,Goju-Ryu,Kata,International,1,1,Right,Right,Left
+ID003_ZEN_T2,ID003,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,2,M,22,158.5,69.2,27.7,17,3 Dan,Goju-Ryu,Kata,International,1,1,Right,Right,Left
+ID003_ZEN_T3,ID003,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,3,M,22,158.5,69.2,27.7,17,3 Dan,Goju-Ryu,Kata,International,1,1,Right,Right,Left
+ID003_ZEN_T4,ID003,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,4,M,22,158.5,69.2,27.7,17,3 Dan,Goju-Ryu,Kata,International,1,1,Right,Right,Left
+ID003_ZEN_T5,ID003,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,5,M,22,158.5,69.2,27.7,17,3 Dan,Goju-Ryu,Kata,International,1,1,Right,Right,Left
+ID003_KOK_T1,ID003,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,1,M,22,158.5,69.2,27.7,17,3 Dan,Goju-Ryu,Kata,International,1,1,Right,Right,Left
+ID003_KOK_T2,ID003,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,2,M,22,158.5,69.2,27.7,17,3 Dan,Goju-Ryu,Kata,International,1,1,Right,Right,Left
+ID003_KOK_T3,ID003,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,3,M,22,158.5,69.2,27.7,17,3 Dan,Goju-Ryu,Kata,International,1,1,Right,Right,Left
+ID003_KOK_T4,ID003,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,4,M,22,158.5,69.2,27.7,17,3 Dan,Goju-Ryu,Kata,International,1,1,Right,Right,Left
+ID003_KOK_T5,ID003,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,5,M,22,158.5,69.2,27.7,17,3 Dan,Goju-Ryu,Kata,International,1,1,Right,Right,Left
+ID003_KIB_T1,ID003,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,1,M,22,158.5,69.2,27.7,17,3 Dan,Goju-Ryu,Kata,International,1,1,Right,Right,Left
+ID003_KIB_T2,ID003,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,2,M,22,158.5,69.2,27.7,17,3 Dan,Goju-Ryu,Kata,International,1,1,Right,Right,Left
+ID003_KIB_T3,ID003,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,3,M,22,158.5,69.2,27.7,17,3 Dan,Goju-Ryu,Kata,International,1,1,Right,Right,Left
+ID003_KIB_T4,ID003,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,4,M,22,158.5,69.2,27.7,17,3 Dan,Goju-Ryu,Kata,International,1,1,Right,Right,Left
+ID003_KIB_T5,ID003,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,5,M,22,158.5,69.2,27.7,17,3 Dan,Goju-Ryu,Kata,International,1,1,Right,Right,Left
+ID003_STATIC_T1,ID003,static_reference,STATIC,anatomical reference,static anatomical,static anatomical,1,M,22,158.5,69.2,27.7,17,3 Dan,Goju-Ryu,Kata,International,1,1,Right,Right,Left
+ID004_ZEN_T1,ID004,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,1,M,23,170.5,104.4,36.1,13,1 Dan,Shotokan,Kumite,Regional,1,1,Right,Left,Left
+ID004_ZEN_T2,ID004,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,2,M,23,170.5,104.4,36.1,13,1 Dan,Shotokan,Kumite,Regional,1,1,Right,Left,Left
+ID004_ZEN_T3,ID004,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,3,M,23,170.5,104.4,36.1,13,1 Dan,Shotokan,Kumite,Regional,1,1,Right,Left,Left
+ID004_ZEN_T4,ID004,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,4,M,23,170.5,104.4,36.1,13,1 Dan,Shotokan,Kumite,Regional,1,1,Right,Left,Left
+ID004_ZEN_T5,ID004,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,5,M,23,170.5,104.4,36.1,13,1 Dan,Shotokan,Kumite,Regional,1,1,Right,Left,Left
+ID004_KOK_T1,ID004,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,1,M,23,170.5,104.4,36.1,13,1 Dan,Shotokan,Kumite,Regional,1,1,Right,Left,Left
+ID004_KOK_T2,ID004,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,2,M,23,170.5,104.4,36.1,13,1 Dan,Shotokan,Kumite,Regional,1,1,Right,Left,Left
+ID004_KOK_T3,ID004,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,3,M,23,170.5,104.4,36.1,13,1 Dan,Shotokan,Kumite,Regional,1,1,Right,Left,Left
+ID004_KOK_T4,ID004,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,4,M,23,170.5,104.4,36.1,13,1 Dan,Shotokan,Kumite,Regional,1,1,Right,Left,Left
+ID004_KOK_T5,ID004,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,5,M,23,170.5,104.4,36.1,13,1 Dan,Shotokan,Kumite,Regional,1,1,Right,Left,Left
+ID004_KIB_T1,ID004,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,1,M,23,170.5,104.4,36.1,13,1 Dan,Shotokan,Kumite,Regional,1,1,Right,Left,Left
+ID004_KIB_T2,ID004,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,2,M,23,170.5,104.4,36.1,13,1 Dan,Shotokan,Kumite,Regional,1,1,Right,Left,Left
+ID004_KIB_T3,ID004,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,3,M,23,170.5,104.4,36.1,13,1 Dan,Shotokan,Kumite,Regional,1,1,Right,Left,Left
+ID004_KIB_T4,ID004,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,4,M,23,170.5,104.4,36.1,13,1 Dan,Shotokan,Kumite,Regional,1,1,Right,Left,Left
+ID004_KIB_T5,ID004,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,5,M,23,170.5,104.4,36.1,13,1 Dan,Shotokan,Kumite,Regional,1,1,Right,Left,Left
+ID004_STATIC_T1,ID004,static_reference,STATIC,anatomical reference,static anatomical,static anatomical,1,M,23,170.5,104.4,36.1,13,1 Dan,Shotokan,Kumite,Regional,1,1,Right,Left,Left
+ID005_ZEN_T1,ID005,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,1,M,21,167.5,70.9,25.4,13,1 Dan,Shotokan,Kumite,International,1,1,Right,Left,Left
+ID005_ZEN_T2,ID005,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,2,M,21,167.5,70.9,25.4,13,1 Dan,Shotokan,Kumite,International,1,1,Right,Left,Left
+ID005_ZEN_T3,ID005,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,3,M,21,167.5,70.9,25.4,13,1 Dan,Shotokan,Kumite,International,1,1,Right,Left,Left
+ID005_ZEN_T4,ID005,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,4,M,21,167.5,70.9,25.4,13,1 Dan,Shotokan,Kumite,International,1,1,Right,Left,Left
+ID005_ZEN_T5,ID005,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,5,M,21,167.5,70.9,25.4,13,1 Dan,Shotokan,Kumite,International,1,1,Right,Left,Left
+ID005_KOK_T1,ID005,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,1,M,21,167.5,70.9,25.4,13,1 Dan,Shotokan,Kumite,International,1,1,Right,Left,Left
+ID005_KOK_T2,ID005,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,2,M,21,167.5,70.9,25.4,13,1 Dan,Shotokan,Kumite,International,1,1,Right,Left,Left
+ID005_KOK_T3,ID005,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,3,M,21,167.5,70.9,25.4,13,1 Dan,Shotokan,Kumite,International,1,1,Right,Left,Left
+ID005_KOK_T4,ID005,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,4,M,21,167.5,70.9,25.4,13,1 Dan,Shotokan,Kumite,International,1,1,Right,Left,Left
+ID005_KOK_T5,ID005,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,5,M,21,167.5,70.9,25.4,13,1 Dan,Shotokan,Kumite,International,1,1,Right,Left,Left
+ID005_KIB_T1,ID005,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,1,M,21,167.5,70.9,25.4,13,1 Dan,Shotokan,Kumite,International,1,1,Right,Left,Left
+ID005_KIB_T2,ID005,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,2,M,21,167.5,70.9,25.4,13,1 Dan,Shotokan,Kumite,International,1,1,Right,Left,Left
+ID005_KIB_T3,ID005,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,3,M,21,167.5,70.9,25.4,13,1 Dan,Shotokan,Kumite,International,1,1,Right,Left,Left
+ID005_KIB_T4,ID005,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,4,M,21,167.5,70.9,25.4,13,1 Dan,Shotokan,Kumite,International,1,1,Right,Left,Left
+ID005_KIB_T5,ID005,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,5,M,21,167.5,70.9,25.4,13,1 Dan,Shotokan,Kumite,International,1,1,Right,Left,Left
+ID005_STATIC_T1,ID005,static_reference,STATIC,anatomical reference,static anatomical,static anatomical,1,M,21,167.5,70.9,25.4,13,1 Dan,Shotokan,Kumite,International,1,1,Right,Left,Left
+ID006_ZEN_T1,ID006,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,1,F,22,158.0,56.6,22.7,10,1 Dan,Goju-Ryu,Kumite,International,2,1,Right,Right,Left
+ID006_ZEN_T2,ID006,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,2,F,22,158.0,56.6,22.7,10,1 Dan,Goju-Ryu,Kumite,International,2,1,Right,Right,Left
+ID006_ZEN_T3,ID006,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,3,F,22,158.0,56.6,22.7,10,1 Dan,Goju-Ryu,Kumite,International,2,1,Right,Right,Left
+ID006_ZEN_T4,ID006,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,4,F,22,158.0,56.6,22.7,10,1 Dan,Goju-Ryu,Kumite,International,2,1,Right,Right,Left
+ID006_ZEN_T5,ID006,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,5,F,22,158.0,56.6,22.7,10,1 Dan,Goju-Ryu,Kumite,International,2,1,Right,Right,Left
+ID006_KOK_T1,ID006,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,1,F,22,158.0,56.6,22.7,10,1 Dan,Goju-Ryu,Kumite,International,2,1,Right,Right,Left
+ID006_KOK_T2,ID006,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,2,F,22,158.0,56.6,22.7,10,1 Dan,Goju-Ryu,Kumite,International,2,1,Right,Right,Left
+ID006_KOK_T3,ID006,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,3,F,22,158.0,56.6,22.7,10,1 Dan,Goju-Ryu,Kumite,International,2,1,Right,Right,Left
+ID006_KOK_T4,ID006,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,4,F,22,158.0,56.6,22.7,10,1 Dan,Goju-Ryu,Kumite,International,2,1,Right,Right,Left
+ID006_KOK_T5,ID006,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,5,F,22,158.0,56.6,22.7,10,1 Dan,Goju-Ryu,Kumite,International,2,1,Right,Right,Left
+ID006_KIB_T1,ID006,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,1,F,22,158.0,56.6,22.7,10,1 Dan,Goju-Ryu,Kumite,International,2,1,Right,Right,Left
+ID006_KIB_T2,ID006,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,2,F,22,158.0,56.6,22.7,10,1 Dan,Goju-Ryu,Kumite,International,2,1,Right,Right,Left
+ID006_KIB_T3,ID006,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,3,F,22,158.0,56.6,22.7,10,1 Dan,Goju-Ryu,Kumite,International,2,1,Right,Right,Left
+ID006_KIB_T4,ID006,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,4,F,22,158.0,56.6,22.7,10,1 Dan,Goju-Ryu,Kumite,International,2,1,Right,Right,Left
+ID006_KIB_T5,ID006,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,5,F,22,158.0,56.6,22.7,10,1 Dan,Goju-Ryu,Kumite,International,2,1,Right,Right,Left
+ID006_STATIC_T1,ID006,static_reference,STATIC,anatomical reference,static anatomical,static anatomical,1,F,22,158.0,56.6,22.7,10,1 Dan,Goju-Ryu,Kumite,International,2,1,Right,Right,Left
+ID007_ZEN_T1,ID007,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,1,F,20,165.0,72.5,26.6,15,1 Dan,Goju-Ryu,Kata,International,3,4,Right,Right,Left
+ID007_ZEN_T2,ID007,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,2,F,20,165.0,72.5,26.6,15,1 Dan,Goju-Ryu,Kata,International,3,4,Right,Right,Left
+ID007_ZEN_T3,ID007,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,3,F,20,165.0,72.5,26.6,15,1 Dan,Goju-Ryu,Kata,International,3,4,Right,Right,Left
+ID007_ZEN_T4,ID007,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,4,F,20,165.0,72.5,26.6,15,1 Dan,Goju-Ryu,Kata,International,3,4,Right,Right,Left
+ID007_ZEN_T5,ID007,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,5,F,20,165.0,72.5,26.6,15,1 Dan,Goju-Ryu,Kata,International,3,4,Right,Right,Left
+ID007_KOK_T1,ID007,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,1,F,20,165.0,72.5,26.6,15,1 Dan,Goju-Ryu,Kata,International,3,4,Right,Right,Left
+ID007_KOK_T2,ID007,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,2,F,20,165.0,72.5,26.6,15,1 Dan,Goju-Ryu,Kata,International,3,4,Right,Right,Left
+ID007_KOK_T3,ID007,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,3,F,20,165.0,72.5,26.6,15,1 Dan,Goju-Ryu,Kata,International,3,4,Right,Right,Left
+ID007_KOK_T4,ID007,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,4,F,20,165.0,72.5,26.6,15,1 Dan,Goju-Ryu,Kata,International,3,4,Right,Right,Left
+ID007_KOK_T5,ID007,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,5,F,20,165.0,72.5,26.6,15,1 Dan,Goju-Ryu,Kata,International,3,4,Right,Right,Left
+ID007_KIB_T1,ID007,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,1,F,20,165.0,72.5,26.6,15,1 Dan,Goju-Ryu,Kata,International,3,4,Right,Right,Left
+ID007_KIB_T2,ID007,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,2,F,20,165.0,72.5,26.6,15,1 Dan,Goju-Ryu,Kata,International,3,4,Right,Right,Left
+ID007_KIB_T3,ID007,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,3,F,20,165.0,72.5,26.6,15,1 Dan,Goju-Ryu,Kata,International,3,4,Right,Right,Left
+ID007_KIB_T4,ID007,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,4,F,20,165.0,72.5,26.6,15,1 Dan,Goju-Ryu,Kata,International,3,4,Right,Right,Left
+ID007_KIB_T5,ID007,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,5,F,20,165.0,72.5,26.6,15,1 Dan,Goju-Ryu,Kata,International,3,4,Right,Right,Left
+ID007_STATIC_T1,ID007,static_reference,STATIC,anatomical reference,static anatomical,static anatomical,1,F,20,165.0,72.5,26.6,15,1 Dan,Goju-Ryu,Kata,International,3,4,Right,Right,Left
+ID008_ZEN_T1,ID008,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,1,F,19,155.0,52.9,22.0,15,1 Dan,Goju-Ryu,Kata,International,6,12,Right,Right,Left
+ID008_ZEN_T2,ID008,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,2,F,19,155.0,52.9,22.0,15,1 Dan,Goju-Ryu,Kata,International,6,12,Right,Right,Left
+ID008_ZEN_T3,ID008,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,3,F,19,155.0,52.9,22.0,15,1 Dan,Goju-Ryu,Kata,International,6,12,Right,Right,Left
+ID008_ZEN_T4,ID008,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,4,F,19,155.0,52.9,22.0,15,1 Dan,Goju-Ryu,Kata,International,6,12,Right,Right,Left
+ID008_ZEN_T5,ID008,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,5,F,19,155.0,52.9,22.0,15,1 Dan,Goju-Ryu,Kata,International,6,12,Right,Right,Left
+ID008_KOK_T1,ID008,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,1,F,19,155.0,52.9,22.0,15,1 Dan,Goju-Ryu,Kata,International,6,12,Right,Right,Left
+ID008_KOK_T2,ID008,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,2,F,19,155.0,52.9,22.0,15,1 Dan,Goju-Ryu,Kata,International,6,12,Right,Right,Left
+ID008_KOK_T3,ID008,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,3,F,19,155.0,52.9,22.0,15,1 Dan,Goju-Ryu,Kata,International,6,12,Right,Right,Left
+ID008_KOK_T4,ID008,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,4,F,19,155.0,52.9,22.0,15,1 Dan,Goju-Ryu,Kata,International,6,12,Right,Right,Left
+ID008_KOK_T5,ID008,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,5,F,19,155.0,52.9,22.0,15,1 Dan,Goju-Ryu,Kata,International,6,12,Right,Right,Left
+ID008_KIB_T1,ID008,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,1,F,19,155.0,52.9,22.0,15,1 Dan,Goju-Ryu,Kata,International,6,12,Right,Right,Left
+ID008_KIB_T2,ID008,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,2,F,19,155.0,52.9,22.0,15,1 Dan,Goju-Ryu,Kata,International,6,12,Right,Right,Left
+ID008_KIB_T3,ID008,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,3,F,19,155.0,52.9,22.0,15,1 Dan,Goju-Ryu,Kata,International,6,12,Right,Right,Left
+ID008_KIB_T4,ID008,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,4,F,19,155.0,52.9,22.0,15,1 Dan,Goju-Ryu,Kata,International,6,12,Right,Right,Left
+ID008_KIB_T5,ID008,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,5,F,19,155.0,52.9,22.0,15,1 Dan,Goju-Ryu,Kata,International,6,12,Right,Right,Left
+ID008_STATIC_T1,ID008,static_reference,STATIC,anatomical reference,static anatomical,static anatomical,1,F,19,155.0,52.9,22.0,15,1 Dan,Goju-Ryu,Kata,International,6,12,Right,Right,Left
+ID009_ZEN_T1,ID009,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,1,F,20,155.0,72.2,30.1,12,1 Dan,Shotokan,Kata,National,3,4,Right,Right,Left
+ID009_ZEN_T2,ID009,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,2,F,20,155.0,72.2,30.1,12,1 Dan,Shotokan,Kata,National,3,4,Right,Right,Left
+ID009_ZEN_T3,ID009,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,3,F,20,155.0,72.2,30.1,12,1 Dan,Shotokan,Kata,National,3,4,Right,Right,Left
+ID009_ZEN_T4,ID009,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,4,F,20,155.0,72.2,30.1,12,1 Dan,Shotokan,Kata,National,3,4,Right,Right,Left
+ID009_ZEN_T5,ID009,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,5,F,20,155.0,72.2,30.1,12,1 Dan,Shotokan,Kata,National,3,4,Right,Right,Left
+ID009_KOK_T1,ID009,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,1,F,20,155.0,72.2,30.1,12,1 Dan,Shotokan,Kata,National,3,4,Right,Right,Left
+ID009_KOK_T2,ID009,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,2,F,20,155.0,72.2,30.1,12,1 Dan,Shotokan,Kata,National,3,4,Right,Right,Left
+ID009_KOK_T3,ID009,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,3,F,20,155.0,72.2,30.1,12,1 Dan,Shotokan,Kata,National,3,4,Right,Right,Left
+ID009_KOK_T4,ID009,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,4,F,20,155.0,72.2,30.1,12,1 Dan,Shotokan,Kata,National,3,4,Right,Right,Left
+ID009_KOK_T5,ID009,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,5,F,20,155.0,72.2,30.1,12,1 Dan,Shotokan,Kata,National,3,4,Right,Right,Left
+ID009_KIB_T1,ID009,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,1,F,20,155.0,72.2,30.1,12,1 Dan,Shotokan,Kata,National,3,4,Right,Right,Left
+ID009_KIB_T2,ID009,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,2,F,20,155.0,72.2,30.1,12,1 Dan,Shotokan,Kata,National,3,4,Right,Right,Left
+ID009_KIB_T3,ID009,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,3,F,20,155.0,72.2,30.1,12,1 Dan,Shotokan,Kata,National,3,4,Right,Right,Left
+ID009_KIB_T4,ID009,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,4,F,20,155.0,72.2,30.1,12,1 Dan,Shotokan,Kata,National,3,4,Right,Right,Left
+ID009_KIB_T5,ID009,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,5,F,20,155.0,72.2,30.1,12,1 Dan,Shotokan,Kata,National,3,4,Right,Right,Left
+ID009_STATIC_T1,ID009,static_reference,STATIC,anatomical reference,static anatomical,static anatomical,1,F,20,155.0,72.2,30.1,12,1 Dan,Shotokan,Kata,National,3,4,Right,Right,Left
+ID010_ZEN_T1,ID010,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,1,F,20,161.5,70.7,27.3,15,1 Dan,Shotokan,Kumite,International,5,8,Right,Right,Left
+ID010_ZEN_T2,ID010,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,2,F,20,161.5,70.7,27.3,15,1 Dan,Shotokan,Kumite,International,5,8,Right,Right,Left
+ID010_ZEN_T3,ID010,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,3,F,20,161.5,70.7,27.3,15,1 Dan,Shotokan,Kumite,International,5,8,Right,Right,Left
+ID010_ZEN_T4,ID010,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,4,F,20,161.5,70.7,27.3,15,1 Dan,Shotokan,Kumite,International,5,8,Right,Right,Left
+ID010_ZEN_T5,ID010,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,5,F,20,161.5,70.7,27.3,15,1 Dan,Shotokan,Kumite,International,5,8,Right,Right,Left
+ID010_KOK_T1,ID010,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,1,F,20,161.5,70.7,27.3,15,1 Dan,Shotokan,Kumite,International,5,8,Right,Right,Left
+ID010_KOK_T2,ID010,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,2,F,20,161.5,70.7,27.3,15,1 Dan,Shotokan,Kumite,International,5,8,Right,Right,Left
+ID010_KOK_T3,ID010,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,3,F,20,161.5,70.7,27.3,15,1 Dan,Shotokan,Kumite,International,5,8,Right,Right,Left
+ID010_KOK_T4,ID010,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,4,F,20,161.5,70.7,27.3,15,1 Dan,Shotokan,Kumite,International,5,8,Right,Right,Left
+ID010_KOK_T5,ID010,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,5,F,20,161.5,70.7,27.3,15,1 Dan,Shotokan,Kumite,International,5,8,Right,Right,Left
+ID010_KIB_T1,ID010,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,1,F,20,161.5,70.7,27.3,15,1 Dan,Shotokan,Kumite,International,5,8,Right,Right,Left
+ID010_KIB_T2,ID010,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,2,F,20,161.5,70.7,27.3,15,1 Dan,Shotokan,Kumite,International,5,8,Right,Right,Left
+ID010_KIB_T3,ID010,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,3,F,20,161.5,70.7,27.3,15,1 Dan,Shotokan,Kumite,International,5,8,Right,Right,Left
+ID010_KIB_T4,ID010,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,4,F,20,161.5,70.7,27.3,15,1 Dan,Shotokan,Kumite,International,5,8,Right,Right,Left
+ID010_KIB_T5,ID010,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,5,F,20,161.5,70.7,27.3,15,1 Dan,Shotokan,Kumite,International,5,8,Right,Right,Left
+ID010_STATIC_T1,ID010,static_reference,STATIC,anatomical reference,static anatomical,static anatomical,1,F,20,161.5,70.7,27.3,15,1 Dan,Shotokan,Kumite,International,5,8,Right,Right,Left
+ID011_ZEN_T1,ID011,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,1,M,21,184.5,84.8,25.0,16,1 Dan,Shotokan,Kumite,International,6,10,Left,Left,Left
+ID011_ZEN_T2,ID011,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,2,M,21,184.5,84.8,25.0,16,1 Dan,Shotokan,Kumite,International,6,10,Left,Left,Left
+ID011_ZEN_T3,ID011,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,3,M,21,184.5,84.8,25.0,16,1 Dan,Shotokan,Kumite,International,6,10,Left,Left,Left
+ID011_ZEN_T4,ID011,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,4,M,21,184.5,84.8,25.0,16,1 Dan,Shotokan,Kumite,International,6,10,Left,Left,Left
+ID011_ZEN_T5,ID011,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,5,M,21,184.5,84.8,25.0,16,1 Dan,Shotokan,Kumite,International,6,10,Left,Left,Left
+ID011_KOK_T1,ID011,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,1,M,21,184.5,84.8,25.0,16,1 Dan,Shotokan,Kumite,International,6,10,Left,Left,Left
+ID011_KOK_T2,ID011,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,2,M,21,184.5,84.8,25.0,16,1 Dan,Shotokan,Kumite,International,6,10,Left,Left,Left
+ID011_KOK_T3,ID011,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,3,M,21,184.5,84.8,25.0,16,1 Dan,Shotokan,Kumite,International,6,10,Left,Left,Left
+ID011_KOK_T4,ID011,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,4,M,21,184.5,84.8,25.0,16,1 Dan,Shotokan,Kumite,International,6,10,Left,Left,Left
+ID011_KOK_T5,ID011,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,5,M,21,184.5,84.8,25.0,16,1 Dan,Shotokan,Kumite,International,6,10,Left,Left,Left
+ID011_KIB_T1,ID011,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,1,M,21,184.5,84.8,25.0,16,1 Dan,Shotokan,Kumite,International,6,10,Left,Left,Left
+ID011_KIB_T2,ID011,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,2,M,21,184.5,84.8,25.0,16,1 Dan,Shotokan,Kumite,International,6,10,Left,Left,Left
+ID011_KIB_T3,ID011,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,3,M,21,184.5,84.8,25.0,16,1 Dan,Shotokan,Kumite,International,6,10,Left,Left,Left
+ID011_KIB_T4,ID011,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,4,M,21,184.5,84.8,25.0,16,1 Dan,Shotokan,Kumite,International,6,10,Left,Left,Left
+ID011_KIB_T5,ID011,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,5,M,21,184.5,84.8,25.0,16,1 Dan,Shotokan,Kumite,International,6,10,Left,Left,Left
+ID011_STATIC_T1,ID011,static_reference,STATIC,anatomical reference,static anatomical,static anatomical,1,M,21,184.5,84.8,25.0,16,1 Dan,Shotokan,Kumite,International,6,10,Left,Left,Left
+ID012_ZEN_T1,ID012,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,1,F,32,161.0,90.6,35.0,25,3 Dan,Shotokan,Kata,National,4,5,Right,Right,Left
+ID012_ZEN_T2,ID012,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,2,F,32,161.0,90.6,35.0,25,3 Dan,Shotokan,Kata,National,4,5,Right,Right,Left
+ID012_ZEN_T3,ID012,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,3,F,32,161.0,90.6,35.0,25,3 Dan,Shotokan,Kata,National,4,5,Right,Right,Left
+ID012_ZEN_T4,ID012,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,4,F,32,161.0,90.6,35.0,25,3 Dan,Shotokan,Kata,National,4,5,Right,Right,Left
+ID012_ZEN_T5,ID012,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,5,F,32,161.0,90.6,35.0,25,3 Dan,Shotokan,Kata,National,4,5,Right,Right,Left
+ID012_KOK_T1,ID012,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,1,F,32,161.0,90.6,35.0,25,3 Dan,Shotokan,Kata,National,4,5,Right,Right,Left
+ID012_KOK_T2,ID012,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,2,F,32,161.0,90.6,35.0,25,3 Dan,Shotokan,Kata,National,4,5,Right,Right,Left
+ID012_KOK_T3,ID012,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,3,F,32,161.0,90.6,35.0,25,3 Dan,Shotokan,Kata,National,4,5,Right,Right,Left
+ID012_KOK_T4,ID012,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,4,F,32,161.0,90.6,35.0,25,3 Dan,Shotokan,Kata,National,4,5,Right,Right,Left
+ID012_KOK_T5,ID012,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,5,F,32,161.0,90.6,35.0,25,3 Dan,Shotokan,Kata,National,4,5,Right,Right,Left
+ID012_KIB_T1,ID012,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,1,F,32,161.0,90.6,35.0,25,3 Dan,Shotokan,Kata,National,4,5,Right,Right,Left
+ID012_KIB_T2,ID012,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,2,F,32,161.0,90.6,35.0,25,3 Dan,Shotokan,Kata,National,4,5,Right,Right,Left
+ID012_KIB_T3,ID012,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,3,F,32,161.0,90.6,35.0,25,3 Dan,Shotokan,Kata,National,4,5,Right,Right,Left
+ID012_KIB_T4,ID012,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,4,F,32,161.0,90.6,35.0,25,3 Dan,Shotokan,Kata,National,4,5,Right,Right,Left
+ID012_KIB_T5,ID012,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,5,F,32,161.0,90.6,35.0,25,3 Dan,Shotokan,Kata,National,4,5,Right,Right,Left
+ID012_STATIC_T1,ID012,static_reference,STATIC,anatomical reference,static anatomical,static anatomical,1,F,32,161.0,90.6,35.0,25,3 Dan,Shotokan,Kata,National,4,5,Right,Right,Left
+ID013_ZEN_T1,ID013,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,1,F,45,160.0,61.7,24.1,1,Branca,Shotokan,ND,ND,2,2,Right,Right,Left
+ID013_ZEN_T2,ID013,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,2,F,45,160.0,61.7,24.1,1,Branca,Shotokan,ND,ND,2,2,Right,Right,Left
+ID013_ZEN_T3,ID013,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,3,F,45,160.0,61.7,24.1,1,Branca,Shotokan,ND,ND,2,2,Right,Right,Left
+ID013_ZEN_T4,ID013,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,4,F,45,160.0,61.7,24.1,1,Branca,Shotokan,ND,ND,2,2,Right,Right,Left
+ID013_ZEN_T5,ID013,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,5,F,45,160.0,61.7,24.1,1,Branca,Shotokan,ND,ND,2,2,Right,Right,Left
+ID013_KOK_T1,ID013,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,1,F,45,160.0,61.7,24.1,1,Branca,Shotokan,ND,ND,2,2,Right,Right,Left
+ID013_KOK_T2,ID013,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,2,F,45,160.0,61.7,24.1,1,Branca,Shotokan,ND,ND,2,2,Right,Right,Left
+ID013_KOK_T3,ID013,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,3,F,45,160.0,61.7,24.1,1,Branca,Shotokan,ND,ND,2,2,Right,Right,Left
+ID013_KOK_T4,ID013,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,4,F,45,160.0,61.7,24.1,1,Branca,Shotokan,ND,ND,2,2,Right,Right,Left
+ID013_KOK_T5,ID013,dynamic,KOK,posteriorised,kokutsu-dachi,kokutsu-dachi,5,F,45,160.0,61.7,24.1,1,Branca,Shotokan,ND,ND,2,2,Right,Right,Left
+ID013_KIB_T1,ID013,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,1,F,45,160.0,61.7,24.1,1,Branca,Shotokan,ND,ND,2,2,Right,Right,Left
+ID013_KIB_T2,ID013,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,2,F,45,160.0,61.7,24.1,1,Branca,Shotokan,ND,ND,2,2,Right,Right,Left
+ID013_KIB_T3,ID013,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,3,F,45,160.0,61.7,24.1,1,Branca,Shotokan,ND,ND,2,2,Right,Right,Left
+ID013_KIB_T4,ID013,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,4,F,45,160.0,61.7,24.1,1,Branca,Shotokan,ND,ND,2,2,Right,Right,Left
+ID013_KIB_T5,ID013,dynamic,KIB,lateralised,kiba-dachi,kiba-dachi,5,F,45,160.0,61.7,24.1,1,Branca,Shotokan,ND,ND,2,2,Right,Right,Left
+ID013_STATIC_T1,ID013,static_reference,STATIC,anatomical reference,static anatomical,static anatomical,1,F,45,160.0,61.7,24.1,1,Branca,Shotokan,ND,ND,2,2,Right,Right,Left
+ID014_ZEN_T1,ID014,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,1,F,20,163.5,59.8,22.5,13,1 Dan,Goju-Ryu,Kata,International,5,7,Right,Right,Left
+ID014_ZEN_T2,ID014,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,2,F,20,163.5,59.8,22.5,13,1 Dan,Goju-Ryu,Kata,International,5,7,Right,Right,Left
+ID014_ZEN_T3,ID014,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,3,F,20,163.5,59.8,22.5,13,1 Dan,Goju-Ryu,Kata,International,5,7,Right,Right,Left
+ID014_ZEN_T4,ID014,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,4,F,20,163.5,59.8,22.5,13,1 Dan,Goju-Ryu,Kata,International,5,7,Right,Right,Left
+ID014_ZEN_T5,ID014,dynamic,ZEN,anteriorised,zenkutsu-dachi,zenkutsu-dachi,5,F,20,163.5,59.8,22.5,13,1 Dan,Goju-Ryu,Kata,International,5,7,Right,Right,Left
+ID014_KOK_T1,ID014,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,1,F,20,163.5,59.8,22.5,13,1 Dan,Goju-Ryu,Kata,International,5,7,Right,Right,Left
+ID014_KOK_T2,ID014,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,2,F,20,163.5,59.8,22.5,13,1 Dan,Goju-Ryu,Kata,International,5,7,Right,Right,Left
+ID014_KOK_T3,ID014,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,3,F,20,163.5,59.8,22.5,13,1 Dan,Goju-Ryu,Kata,International,5,7,Right,Right,Left
+ID014_KOK_T4,ID014,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,4,F,20,163.5,59.8,22.5,13,1 Dan,Goju-Ryu,Kata,International,5,7,Right,Right,Left
+ID014_KOK_T5,ID014,dynamic,KOK,posteriorised,kokutsu-dachi,neko-ashi-dachi,5,F,20,163.5,59.8,22.5,13,1 Dan,Goju-Ryu,Kata,International,5,7,Right,Right,Left
+ID014_KIB_T1,ID014,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,1,F,20,163.5,59.8,22.5,13,1 Dan,Goju-Ryu,Kata,International,5,7,Right,Right,Left
+ID014_KIB_T2,ID014,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,2,F,20,163.5,59.8,22.5,13,1 Dan,Goju-Ryu,Kata,International,5,7,Right,Right,Left
+ID014_KIB_T3,ID014,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,3,F,20,163.5,59.8,22.5,13,1 Dan,Goju-Ryu,Kata,International,5,7,Right,Right,Left
+ID014_KIB_T4,ID014,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,4,F,20,163.5,59.8,22.5,13,1 Dan,Goju-Ryu,Kata,International,5,7,Right,Right,Left
+ID014_KIB_T5,ID014,dynamic,KIB,lateralised,kiba-dachi,shiko-dachi,5,F,20,163.5,59.8,22.5,13,1 Dan,Goju-Ryu,Kata,International,5,7,Right,Right,Left
+ID014_STATIC_T1,ID014,static_reference,STATIC,anatomical reference,static anatomical,static anatomical,1,F,20,163.5,59.8,22.5,13,1 Dan,Goju-Ryu,Kata,International,5,7,Right,Right,Left
