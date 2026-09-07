@@ -305,7 +305,7 @@ KOK            53.0      92.0      80.1   ← contraste-bomba
 ZEN            88.6      86.1      73.5
 ```
 
-KOK Goju 53 cm vs Shotokan 92 cm = **diferença de 39 cm** (57% redução de área), confirmando que praticantes Gōjū-ryū executam *neko-ashi-dachi* mesmo quando instruídos no nome canônico Shōtōkan *kōkutsu-dachi*. Validação quantitativa do protocolo style-adaptive.
+KOK por execução: *neko-ashi-dachi* 53,0 ± 4,3 cm vs *kōkutsu-dachi* 90,3 ± 13,2 cm de profundidade A-P = **diferença de 37 cm** (58% de redução de área), confirmando que praticantes Gōjū-ryū executam *neko-ashi-dachi* mesmo quando instruídos no nome canônico Shōtōkan *kōkutsu-dachi*. Validação quantitativa do protocolo style-adaptive. (Números recalculados sobre os metadados corrigidos da v0.5.0.)
 
 Tabela `COM height (m) × base × style`:
 ```

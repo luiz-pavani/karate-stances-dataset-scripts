@@ -42,7 +42,7 @@ Trial IDs follow `<subject>_<base>_T<repetition>`. Example: `ID003_ZEN_T1` = par
 
 ## 4. Style-adaptive verbal protocol
 
-A single experimenter issued the verbal command at the third second of each trial using the canonical Shōtōkan name of the base (e.g., *kōkutsu-dachi* for the posteriorised base). Gōjū-ryū participants executed the Naha-te equivalent (*neko-ashi-dachi* for the same posteriorised base; *shiko-dachi* for the lateralised base). The pairing canonical-name ↔ executed-name is recorded per trial in `KDS_Info.xlsx`. This design lets re-users probe within-base biomechanical contrast across style lineages (e.g., 39 cm difference in base-of-support depth between *kōkutsu-dachi* and *neko-ashi-dachi*) without confounding from across-protocol comparison.
+A single experimenter issued the verbal command at the third second of each trial using the canonical Shōtōkan name of the base (e.g., *kōkutsu-dachi* for the posteriorised base). Gōjū-ryū participants executed the Naha-te equivalent (*neko-ashi-dachi* for the same posteriorised base; *shiko-dachi* for the lateralised base). The pairing canonical-name ↔ executed-name is recorded per trial in `KDS_Info.xlsx`. This design lets re-users probe within-base biomechanical contrast across style lineages (e.g., 37 cm difference in base-of-support depth between *kōkutsu-dachi*, 90.3 cm, and *neko-ashi-dachi*, 53.0 cm) without confounding from across-protocol comparison.
 
 ## 5. Schema details
 
