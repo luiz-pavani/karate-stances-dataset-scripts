@@ -3,7 +3,7 @@
 **Dataset DOI**: [10.6084/m9.figshare.32288943](https://doi.org/10.6084/m9.figshare.32288943)
 **License**: Creative Commons CC0 1.0 Universal (CC0) public-domain dedication (v2; v1 was released under CC-BY 4.0)
 **Code repository**: <https://github.com/luiz-pavani/karate-stances-dataset-scripts> (MIT)
-**Companion paper**: Pavani, L., Robalino, J. A., Parolini, F., Goethel, M., & Vilas-Boas, J. P. *A Biomechanical Dataset of Fundamental Karate-dō Stances: Markerless Kinematics and Ground Reaction Forces in Twelve Karateka*. Data Note submitted to *Open Research Europe* (2026).
+**Companion paper**: Pavani, L., Parolini, F., Goethel, M., & Vilas-Boas, J. P. *A Biomechanical Dataset of Fundamental Karate-dō Stances: Markerless Kinematics and Ground Reaction Forces in Twelve Karateka*. Data Note submitted to *Open Research Europe* (2026).
 **Contact (corresponding author)**: Luiz Pavani — `up202401900@up.pt` — ORCID 0009-0009-4831-5160
 
 ---
@@ -115,7 +115,9 @@ python -m kds.batch --data-root /path/to/KDS_kinematic_raw_c3d --output-dir ./ou
 
 ## 8. Data citation
 
-Pavani, L., Robalino, J. A., Parolini, F., Goethel, M., & Vilas-Boas, J. P. (2026). *Karate Stances Dataset*. Figshare. <https://doi.org/10.6084/m9.figshare.32288943>
+Pavani, L., Parolini, F., Goethel, M., & Vilas-Boas, J. P. (2026). *Karate Stances Dataset*. Figshare. <https://doi.org/10.6084/m9.figshare.32288943>
+
+*Version note (v3):* the author list of this item was updated on 3 November 2026, at the request of a former co-author, whose contribution to the data-collection sessions is acknowledged in the companion Data Note; all data files are unchanged from version 2 (this README is the only modified file).
 
 ## 9. Acknowledgements and ethics
 
