@@ -1,6 +1,6 @@
 # Procedure report — kinematic pipeline of the *karate stances* dataset
 
-**Date**: 2026-05-15
+**Date**: 2026-05-15 (updated 2026-11-03, pipeline v0.6.0)
 **Author**: Luiz Pavani (open Python pipeline)
 **Figshare item**: [10.6084/m9.figshare.32288943](https://doi.org/10.6084/m9.figshare.32288943)
 **Open code**: <https://github.com/luiz-pavani/karate-stances-dataset-scripts>
@@ -171,14 +171,14 @@ For each window (pre-strike or post-strike), `ROM = max − min` per axis. Dynam
 
 ### Step 4 — Strike detection (`strike_detection.py`)
 
-**Algorithm**:
-1. Compute scalar (magnitude) velocity of `r_hand` and `l_hand` origins.
-2. Automatically select the side with the higher peak speed.
+**Algorithm** (pipeline ≥ v0.6.0):
+1. Identify the punching hand by its forward excursion along the stance's facing axis (`ZEN`/`KOK` face lab +Y; `KIB` faces lab +X): excursion = strike-window maximum of the hand-origin position along that axis minus its pre-strike-hold mean. In the 120 `ZEN`/`KOK` trials this criterion agrees 100 % with the foot geometry of the stance (punching hand contralateral to the front foot).
+2. Compute the scalar (magnitude) velocity of the punching hand's origin. (*Correction note*: pipeline versions < 0.6.0 selected "the hand with the higher peak speed", which in the *gyaku-tsuki* protocol picks the **hikite** hand in 60 of the 180 trials; the peak-speed rule now remains only as a last-resort fallback — see the repository `CHANGELOG.md`.)
 3. Mark `peak_time` (time of the maximum), `peak_speed` (magnitude at the peak), `onset_time` (first ascending crossing of 10 % of peak before the peak), and `return_time` (first descending crossing of 10 % of peak after the peak).
 
 **Descriptive validation (180 trials)**:
-- Peak time: 4.02 ± 0.21 s (≈ 1 s after the nominal "*vai*" at 3 s — consistent with reaction + execution)
-- Peak speed: 5.99 ± 0.74 m·s⁻¹ (in the 5–9 m·s⁻¹ range reported for elite and sub-elite *tsuki*)
+- Peak time: 4.03 ± 0.20 s (≈ 1 s after the nominal "*vai*" at 3 s — consistent with reaction + execution)
+- Peak speed: 5.86 ± 0.81 m·s⁻¹ (in the 5–9 m·s⁻¹ range reported for elite and sub-elite *tsuki*)
 
 ### Step 5 — Descriptors (`descriptors.py`)
 
@@ -244,7 +244,7 @@ From `summary_all_trials.csv`, the final step joins demographics and produces th
 COM computed by the pipeline (Theia sex-specific inertia) versus the COM exported by Visual3D (Dempster inertia): **mean offset 13.5 ± 4.2 mm** across the 180 trials. The literature-expected magnitude between distinct inertial models is 10–20 mm.
 
 ### 5.3 Strike-detection plausibility
-Peak time 4.02 ± 0.21 s vs nominal "*vai*" at 3.00 s — a reaction-plus-execution latency near 1 s, in line with reported *tsuki* reaction times (Pozo 2011; Cesari 2008).
+Peak time 4.03 ± 0.20 s vs nominal "*vai*" at 3.00 s — a reaction-plus-execution latency near 1 s, in line with reported *tsuki* reaction times (Pozo 2011; Cesari 2008).
 
 ### 5.4 Biomechanical sanity check
 

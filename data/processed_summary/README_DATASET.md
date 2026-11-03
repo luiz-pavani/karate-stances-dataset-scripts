@@ -1,9 +1,9 @@
 # Karate Stances Dataset — README
 
 **Dataset DOI**: [10.6084/m9.figshare.32288943](https://doi.org/10.6084/m9.figshare.32288943)
-**License**: Creative Commons Attribution 4.0 International (CC-BY 4.0)
+**License**: Creative Commons CC0 1.0 Universal (CC0) public-domain dedication (v2; v1 was released under CC-BY 4.0)
 **Code repository**: <https://github.com/luiz-pavani/karate-stances-dataset-scripts> (MIT)
-**Companion paper**: Pavani, L., Robalino, J. A., Parolini, F., Goethel, M., & Vilas-Boas, J. P. *A Biomechanical Dataset of Fundamental Karate-dō Stances: Markerless Kinematics and Ground Reaction Forces in Twelve Karateka*. Submitted to *Scientific Data* (2026).
+**Companion paper**: Pavani, L., Robalino, J. A., Parolini, F., Goethel, M., & Vilas-Boas, J. P. *A Biomechanical Dataset of Fundamental Karate-dō Stances: Markerless Kinematics and Ground Reaction Forces in Twelve Karateka*. Data Note submitted to *Open Research Europe* (2026).
 **Contact (corresponding author)**: Luiz Pavani — `up202401900@up.pt` — ORCID 0009-0009-4831-5160
 
 ---
@@ -24,6 +24,8 @@ Acquisition was conducted in the Porto Biomechanics Laboratory (LABIOMEP) using 
 
 All time-series are expressed in the laboratory frame (X, Y horizontal; Z vertical, upward positive). **The anatomical meaning of the two horizontal axes is stance-dependent**, because the stances were not all performed facing the same laboratory direction (verified against the gyaku-tsuki punch direction in all 180 dynamic trials): `ZEN` and `KOK` trials face lab +Y (X = mediolateral, Y = anteroposterior); `KIB` trials face lab +X (X = anteroposterior, Y = mediolateral). The `_ml_`/`_ap_` descriptors in the derived analysis tables already apply this per-stance mapping. *Correction note:* releases of the derived tables prior to v0.5.0 of the companion pipeline applied X = mediolateral to all stances, which mislabelled (not mis-measured) the ML/AP descriptor pairs of the `KIB` rows; the values were unchanged and only the labels were permuted (see the repository `CHANGELOG.md`).
 
+*Correction note (v2):* in version 1 of this item, the strike-event descriptors of the derived tables (`strike_hand`, `strike_peak_speed_mps`, `strike_peak_time_s`, `strike_onset_time_s`, `strike_return_time_s`) identified the struck hand as "the hand with the higher peak speed", which in the *gyaku-tsuki* protocol selects the **hikite** (pull-back) hand in 60 of the 180 dynamic trials. Version 2 regenerates these five columns with pipeline v0.6.0, which identifies the punching hand by its forward excursion along the stance's facing axis (100 % agreement with the foot geometry in the `ZEN`/`KOK` trials). Cohort peak hand speed changes from 5.99 ± 0.74 to 5.86 ± 0.81 m·s⁻¹; all other descriptors, and the raw kinematic and kinetic streams, are byte-identical to version 1 (see the repository `CHANGELOG.md`, entry 0.6.0).
+
 ## 2. Files released on Figshare
 
 | File | Size | Content |
@@ -32,7 +34,7 @@ All time-series are expressed in the laboratory frame (X, Y horizontal; Z vertic
 | `KDS_kinematic_timeseries.zip` | 103 MB | Per-trial kinematic CSVs at 180 Hz, 98 columns each (1620 frames per dynamic trial). 180 dynamic + 9 STATIC files. |
 | `KDS_kinetic_raw_tsv.zip` | 110 MB | Raw force-platform TSV files exported by Qualisys QTM from both Bertec platforms (FP3 + FP4), 1000 Hz, two header variants (11-col for ID003–ID004; 9-col for ID005–ID014). |
 | `KDS_kinetic_timeseries.zip` | 122 MB | Per-trial kinetic CSVs at 1000 Hz, 20 columns each (9000 frames per dynamic trial; variable for STATIC). 180 dynamic + 12 STATIC + the QC report + the lab-frame plate-corner table. |
-| `KDS_kinematic_analysis.zip` | 0.8 MB | Three derived analysis tables — wide format, long format, and codebook — emitted by the open pipeline; full pipeline procedure report in English. Provided as a reproducible analytic example; re-users are encouraged to regenerate from the time-series with the pipeline of their choice. |
+| `KDS_kinematic_analysis.zip` | ≈ 1 MB | Derived tables emitted by the open pipeline — the three per-trial summary tables (`KDS_summary_all_trials.csv`, `KDS_summary_static.csv`, `KDS_subject_means.csv`) and the three analysis tables (wide format, long format, codebook) — plus the full pipeline procedure report in English and a copy of the pipeline `CHANGELOG.md`. Provided as a reproducible analytic example; re-users are encouraged to regenerate from the time-series with the pipeline of their choice. |
 | `KDS_Info.xlsx` | ≤ 0.1 MB | Per-trial metadata workbook (192 rows × 23 columns) with the per-trial subject identifier, base code, canonical-Shōtōkan and stylistic-executed name pairing, subject demographics, training history, competition modality and level, and limb-dominance. |
 | `README.md` | this file | Top-level documentation. |
 
@@ -117,7 +119,7 @@ Pavani, L., Robalino, J. A., Parolini, F., Goethel, M., & Vilas-Boas, J. P. (202
 
 ## 9. Acknowledgements and ethics
 
-All participants were recruited in the Porto metropolitan karate community, provided written informed consent in accordance with the Declaration of Helsinki, and were free to withdraw at any time. The data acquisition was conducted under the ethics approval `CEFADE 09/2025` of the Faculty of Sport, University of Porto. The dataset was released within the framework of the first author's master's dissertation in High-Performance Sports Training (FADEUP) and is offered under CC-BY 4.0; the code that processes it is released under MIT.
+All participants were recruited in the Porto metropolitan karate community, provided written informed consent in accordance with the Declaration of Helsinki, and were free to withdraw at any time. The data acquisition was conducted under the ethics approval `CEFADE 09/2025` of the Faculty of Sport, University of Porto. The dataset was released within the framework of the first author's master's dissertation in High-Performance Sports Training (FADEUP) and is offered under the CC0 1.0 Universal public-domain dedication; the code that processes it is released under MIT.
 
 ---
 
