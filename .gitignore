@@ -58,3 +58,6 @@ figures/_generated/
 # Local notes
 notes_local/
 TODO.local.md
+
+# Local regeneration output (v0.6.0 validation run)
+/output_v060/

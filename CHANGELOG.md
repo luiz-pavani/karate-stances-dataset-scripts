@@ -4,6 +4,27 @@ All notable changes to this repository will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.0] — 2026-11-03
+
+### Fixed
+- **Punching-hand identification (`strike_detection`).** The automatic
+  fallback selected "the hand with the higher peak speed", which in the
+  *gyaku-tsuki* protocol picks the **hikite** hand (the contralateral
+  pull-back to the hip) in 60 of the 180 released dynamic trials
+  (ZEN 13, KOK 24, KIB 23; audit of 2026-11-03, `strike_audit.csv`).
+  The punching hand is now identified by its **forward excursion along
+  the stance's facing axis** (`punch_hand()`: KIB faces lab +X; ZEN/KOK
+  face lab +Y; excursion = strike-window maximum minus pre-strike-hold
+  mean). In the 120 ZEN/KOK trials the new criterion agrees 100% with
+  the foot-geometry rule (punching hand opposite to the front foot).
+  The peak-speed rule remains only as a last-resort fallback.
+- Affected published columns (`KDS_summary_all_trials.csv`,
+  `KDS_subject_means.csv`, `KDS_qc_report.csv`): `strike_hand`,
+  `strike_peak_speed_mps`, `strike_peak_time_s`, `strike_onset_time_s`,
+  `strike_return_time_s`. Cohort peak hand speed changes from
+  5.99 ± 0.74 m/s to 5.86 ± 0.81 m/s; peak times are essentially
+  unchanged. Kinematic, kinetic and BoS descriptors are unaffected.
+
 ## [0.5.0] — 2026-09-07
 
 ### Fixed
