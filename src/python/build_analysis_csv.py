@@ -170,7 +170,7 @@ def write_codebook(df_wide: pd.DataFrame, out_path: Path) -> None:
         "bmi_kg_m2": "Body mass index.",
         "practice_years": "Self-reported karate practice in years.",
         "grade": "Karate grade (kyu/dan or 'Branca' for white belt).",
-        "style": "Karate style lineage (Shotokan / Goju-Ryu / Wado-Ryu).",
+        "style": "Karate style lineage (Shotokan / Goju-Ryu).",
         "modality": "Primary competitive modality (Kata / Kumite / None).",
         "level": "Competitive level (International / National / Regional / None).",
         "weekly_days": "Self-reported training days per week.",

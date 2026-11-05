@@ -19,7 +19,7 @@ class Subject:
     bmi: float
     practice_years: int
     grade: str          # e.g. '1 Dan', '3 Dan', 'Branca'
-    style: str          # 'Shotokan' | 'Goju-Ryu' | 'Wado-Ryu'
+    style: str          # 'Shotokan' | 'Goju-Ryu'
     modality: str | None  # 'Kata' | 'Kumite' | None
     level: str | None     # 'International' | 'National' | 'Regional' | None
     weekly_days: float

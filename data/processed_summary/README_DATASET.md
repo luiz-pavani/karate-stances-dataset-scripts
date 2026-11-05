@@ -26,6 +26,8 @@ All time-series are expressed in the laboratory frame (X, Y horizontal; Z vertic
 
 *Correction note (v2):* in version 1 of this item, the strike-event descriptors of the derived tables (`strike_hand`, `strike_peak_speed_mps`, `strike_peak_time_s`, `strike_onset_time_s`, `strike_return_time_s`) identified the struck hand as "the hand with the higher peak speed", which in the *gyaku-tsuki* protocol selects the **hikite** (pull-back) hand in 60 of the 180 dynamic trials. Version 2 regenerates these five columns with pipeline v0.6.0, which identifies the punching hand by its forward excursion along the stance's facing axis (100 % agreement with the foot geometry in the `ZEN`/`KOK` trials). Cohort peak hand speed changes from 5.99 ± 0.74 to 5.86 ± 0.81 m·s⁻¹; all other descriptors, and the raw kinematic and kinetic streams, are byte-identical to version 1 (see the repository `CHANGELOG.md`, entry 0.6.0).
 
+*Correction note (v4):* in versions 1–3, the `time_s` column of two per-trial kinetic CSVs started at 0 instead of the true record start, shifting them relative to the kinematic stream: `ID006 KIB T4` (by 2.30 s) and `ID007 KIB T5` (by 3.60 s). Version 4 corrects these two files. It also corrects the procedure report (see the repository `CHANGELOG.md`, entry 0.6.1). The force, moment and COP values and the raw archives are unchanged.
+
 ## 2. Files released on Figshare
 
 | File | Size | Content |
@@ -33,24 +35,24 @@ All time-series are expressed in the laboratory frame (X, Y horizontal; Z vertic
 | `KDS_kinematic_raw_c3d.zip` | 812 MB | Raw and Theia-filtered C3D output (`*_pose_0.c3d`, `*_pose_filt_0.c3d`) for the 19-segment Theia3D reconstruction, organised as `<subject>/<base>/T<n>/`. Native Theia3D format. |
 | `KDS_kinematic_timeseries.zip` | 103 MB | Per-trial kinematic CSVs at 180 Hz, 98 columns each (1620 frames per dynamic trial). 180 dynamic + 9 STATIC files. |
 | `KDS_kinetic_raw_tsv.zip` | 110 MB | Raw force-platform TSV files exported by Qualisys QTM from both Bertec platforms (FP3 + FP4), 1000 Hz, two header variants (11-col for ID003–ID004; 9-col for ID005–ID014). |
-| `KDS_kinetic_timeseries.zip` | 122 MB | Per-trial kinetic CSVs at 1000 Hz, 20 columns each (9000 frames per dynamic trial; variable for STATIC). 180 dynamic + 12 STATIC + the QC report + the lab-frame plate-corner table. |
-| `KDS_kinematic_analysis.zip` | ≈ 1 MB | Derived tables emitted by the open pipeline — the three per-trial summary tables (`KDS_summary_all_trials.csv`, `KDS_summary_static.csv`, `KDS_subject_means.csv`) and the three analysis tables (wide format, long format, codebook) — plus the full pipeline procedure report in English and a copy of the pipeline `CHANGELOG.md`. Provided as a reproducible analytic example; re-users are encouraged to regenerate from the time-series with the pipeline of their choice. |
+| `KDS_kinetic_timeseries.zip` | 122 MB | Per-trial kinetic CSVs at 1000 Hz, 20 columns each (9000 frames in 177 of the 180 dynamic trials, see §5.2; 2000 frames for STATIC). 180 dynamic + 12 STATIC + the QC report + the lab-frame plate-corner table. |
+| `KDS_kinematic_analysis.zip` | 1.1 MB | Derived tables emitted by the open pipeline — the three per-trial summary tables (`KDS_summary_all_trials.csv`, `KDS_summary_static.csv`, `KDS_subject_means.csv`), the three analysis tables (wide format, long format, codebook), and the kinematic QC table (`KDS_qc_report.csv`) — plus the full pipeline procedure report in English, the protocol summary (`protocol.md`), and a copy of the pipeline `CHANGELOG.md`. Provided as a reproducible analytic example; re-users are encouraged to regenerate from the time-series with the pipeline of their choice. |
 | `KDS_Info.xlsx` | ≤ 0.1 MB | Per-trial metadata workbook (192 rows × 23 columns) with the per-trial subject identifier, base code, canonical-Shōtōkan and stylistic-executed name pairing, subject demographics, training history, competition modality and level, and limb-dominance. |
 | `README.md` | this file | Top-level documentation. |
 
 ## 3. Trial nomenclature
 
-Trial IDs follow `<subject>_<base>_T<repetition>`. Example: `ID003_ZEN_T1` = participant `ID003`, anteriorised base, repetition 1. The `KUK→KOK` typo in the acquisition-time folder structure of `ID009` was resolved during export; released filenames consistently use `KOK`.
+Trial IDs follow `<subject>_<base>_T<repetition>`. Example: `ID003_ZEN_T1` = participant `ID003`, anteriorised base, repetition 1. The per-trial CSVs of `ID009` use `KOK`. The raw archives keep the acquisition-time typo `KUK` in their folder and file names, and the open pipeline maps it to `KOK` at load time.
 
 ## 4. Style-adaptive verbal protocol
 
-A single experimenter issued the verbal command at the third second of each trial using the canonical Shōtōkan name of the base (e.g., *kōkutsu-dachi* for the posteriorised base). Gōjū-ryū participants executed the Naha-te equivalent (*neko-ashi-dachi* for the same posteriorised base; *shiko-dachi* for the lateralised base). The pairing canonical-name ↔ executed-name is recorded per trial in `KDS_Info.xlsx`. This design lets re-users probe within-base biomechanical contrast across style lineages (e.g., 37 cm difference in base-of-support depth between *kōkutsu-dachi*, 90.3 cm, and *neko-ashi-dachi*, 53.0 cm) without confounding from across-protocol comparison.
+The experimenter named the Shōtōkan-canonical stance (e.g., *kōkutsu-dachi* for the posteriorised base) and, for Gōjū-ryū participants, the equivalent in the participant's own tradition (*neko-ashi-dachi* for the posteriorised base; *shiko-dachi* for the lateralised base). The *gyaku-tsuki* itself was executed on the "vai" cue at the third second of each trial. The pairing canonical-name ↔ executed-name is recorded per trial in `KDS_Info.xlsx`. This design lets re-users probe within-base biomechanical contrast across style lineages (e.g., 37 cm difference in base-of-support depth between *kōkutsu-dachi*, 90.3 cm, and *neko-ashi-dachi*, 53.0 cm) without confounding from across-protocol comparison.
 
 ## 5. Schema details
 
 ### 5.1 Kinematic per-trial CSV (`KDS_kinematic_timeseries/*_kinematics.csv`)
 
-98 columns: 2 identifying (`frame`, `time_s`) + 57 segment origins (19 segments × 3 axes: `<seg>_x`, `<seg>_y`, `<seg>_z` in metres, lab frame) + 3 whole-body centre-of-mass (`com_x`, `com_y`, `com_z`, metres, sex-specific de Leva inertial parameters) + 36 joint angles (12 ISB joints × 3 axes Cardan/Euler in degrees, Wu 2002/2005 conventions: `<joint>_flx_deg`, `<joint>_abd_deg`, `<joint>_rot_deg`).
+98 columns: 2 identifying (`frame`, `time_s`) + 57 segment origins (19 segments × 3 axes: `<seg>_x`, `<seg>_y`, `<seg>_z` in metres, lab frame) + 3 whole-body centre-of-mass (`com_x`, `com_y`, `com_z`, metres, sex-specific inertial parameters stored by Theia3D in the C3D header) + 36 joint angles (12 ISB joints × 3 axes Cardan/Euler in degrees, Wu 2002/2005 conventions: `<joint>_flx_deg`, `<joint>_abd_deg`, `<joint>_rot_deg`).
 
 Segments: `worldbody`, `pelvis`, `l_thigh`, `l_shank`, `l_foot`, `l_toes`, `r_thigh`, `r_shank`, `r_foot`, `r_toes`, `head`, `torso`, `l_uarm`, `l_larm`, `l_hand`, `r_uarm`, `r_larm`, `r_hand`, `pelvis_shifted`.
 
@@ -58,19 +60,21 @@ Joints: `hip_right`, `hip_left`, `knee_right`, `knee_left`, `ankle_right`, `ankl
 
 ### 5.2 Kinetic per-trial CSV (`KDS_kinetic_timeseries/*_kinetics.csv`)
 
-20 columns: 2 identifying (`frame`, `time_s`) + 9 per Bertec platform (`FP3_*` and `FP4_*`): forces `Fx`, `Fy`, `Fz` (N); free moments `Mx`, `My`, `Mz` (N·mm) about each plate centre; centre-of-pressure `COPx`, `COPy`, `COPz` (mm) in the laboratory frame. Bertec sign convention: a participant standing on a plate produces a negative `Fz`. Absent-plate columns (5 single-platform trials) are filled with `NaN`s; the QC report flags these per trial.
+20 columns: 2 identifying (`frame`, `time_s`) + 9 per Bertec platform (`FP3_*` and `FP4_*`): forces `Fx`, `Fy`, `Fz` (N); free moments `Mx`, `My`, `Mz` (N·mm) about each plate centre; centre-of-pressure `COPx`, `COPy`, `COPz` (mm) in the laboratory frame. Bertec sign convention: a participant standing on a plate produces a negative `Fz`. Absent-plate columns (5 single-platform trials) are filled with `NaN`s; the QC report flags these per trial. Three dynamic records start after the trial origin, and `time_s` keeps that origin: `ID003 KIB T1` (7750 samples, from t = 1.25 s), `ID006 KIB T4` (6700, from t = 2.30 s), and `ID007 KIB T5` (5400, from t = 3.60 s).
 
 ### 5.3 Auxiliary kinetic tables (within `KDS_kinetic_timeseries.zip`)
 
-- `kinetic_qc_report.csv` (192 rows × 12 cols): per-trial completeness flags, which platforms fired, sample count, header-variant, lab-frame origin offset.
+- `kinetic_qc_report.csv` (192 rows × 12 cols): per-trial sample count, rate, duration, which platforms fired, source file names, and the `KUK` alias flag.
 - `kinetic_plate_corners.csv` (1 516 rows × 7 cols): the four lab-frame corner coordinates of each plate per trial, written by Qualisys QTM at acquisition time.
 
 ### 5.4 Analytic tables (`KDS_kinematic_analysis.zip`)
 
-- `kinematic_analysis_wide.csv`: 180 rows × ~110 columns; one row per dynamic trial; pre-strike (1–3 s) and post-strike (6–9 s) window means and ROMs for the 12 joints × 3 axes, base-of-support width/depth/area/centroid, whole-body COM mean position and sway descriptors, detected strike-event timing and peak hand-speed.
+- `kinematic_analysis_wide.csv`: 180 rows × 200 columns; one row per dynamic trial; pre-strike (1–3 s) and post-strike (6–9 s) window means and ROMs for the 12 joints × 3 axes, base-of-support width/depth/area/centroid, whole-body COM mean position and sway descriptors, detected strike-event timing and peak hand-speed.
 - `kinematic_analysis_long.csv`: same content reshaped to a tidy long format (one row per trial × variable × window).
 - `kinematic_analysis_codebook.csv`: variable-level codebook with units, computation rule, and window definition.
 - `PROCEDURE_REPORT.md`: full English-language methodological narrative of how the analytic tables are derived from the raw C3D — provided for transparency; the same procedure is executable from the open pipeline (see §7).
+- `KDS_qc_report.csv`: per-trial kinematic QC record (189 rows).
+- `protocol.md`: summary of the acquisition protocol.
 
 These analytic tables are released as a reproducible reference computation, not as the canonical analytical artefact. Re-users with different processing choices (different filtering, different windowing, derived kinetic descriptors, alternative COP-based metrics) should regenerate analogous tables from the per-trial time-series streams.
 
@@ -101,7 +105,7 @@ from kds.loader import read_c3d_trial
 from kds.kinematics_linear import whole_body_com
 from kds.demographics import SUBJECTS
 
-trial_path = "KDS_kinematic_raw_c3d/ID003/ZEN/T1/ID003_ZEN_T1_pose_filt_0.c3d"
+trial_path = "Kinematic Data/ID003/ZEN/T1/ID003_ZEN_T1_pose_filt_0.c3d"
 rec = read_c3d_trial(trial_path)
 com = whole_body_com(rec, sex=SUBJECTS[rec.subject].sex)   # (3, n_frames) ndarray
 print(com[:, 0])   # COM at frame 0, lab-frame, metres
@@ -110,12 +114,12 @@ print(com[:, 0])   # COM at frame 0, lab-frame, metres
 Full pipeline regeneration (recomputes every analytic table from the raw archive):
 
 ```bash
-python -m kds.batch --data-root /path/to/KDS_kinematic_raw_c3d --output-dir ./out
+python -m kds.batch --data-root "/path/to/Kinematic Data" --output-dir ./out
 ```
 
 ## 8. Data citation
 
-Pavani, L., Parolini, F., Goethel, M., & Vilas-Boas, J. P. (2026). *Karate Stances Dataset*. Figshare. <https://doi.org/10.6084/m9.figshare.32288943>
+Pavani, L., Parolini, F., Goethel, M., & Vilas-Boas, J. P. (2026). *A Biomechanical Dataset of Fundamental Karate-dō Stances: Markerless Kinematics and Ground Reaction Forces in Twelve Karateka*. Figshare. <https://doi.org/10.6084/m9.figshare.32288943>
 
 *Version note (v3):* the author list of this item was updated on 3 November 2026, at the request of a former co-author, whose contribution to the data-collection sessions is acknowledged in the companion Data Note; all data files are unchanged from version 2 (this README is the only modified file).
 
@@ -125,4 +129,4 @@ All participants were recruited in the Porto metropolitan karate community, prov
 
 ---
 
-*README v1.0 — 2026-05-18 (data records frozen at Figshare 32288943).*
+*README updated for version 4 — 2026-11-05 (Figshare 32288943).*

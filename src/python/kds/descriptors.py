@@ -9,7 +9,7 @@ Each panel includes:
 
   - COM mean position (x, y, z) in metres
   - COM mediolateral (ML) and anteroposterior (AP) sway range, RMS, and path length
-  - Base of support: width (ML), depth (AP), area (using the four foot landmarks)
+  - Base of support: width (ML), depth (AP), area (using the six foot landmarks)
   - COM placement within the base of support (ML and AP coordinates relative
     to the BoS centroid, in metres and as percentage of BoS span)
   - Joint angle mean per axis (10 joints × 3 axes = 30 scalars)
@@ -66,7 +66,7 @@ def _path_length_2d(x: np.ndarray, y: np.ndarray) -> float:
 def _bos_from_pos_df(df: pd.DataFrame, window: slice, base: str) -> dict:
     """Compute base-of-support descriptors from the Visual3D POS export.
 
-    The four key landmarks per foot are:
+    The three key landmarks per foot are:
       LFT_DistEnd (left toe), LFT_ProxEnd (left heel), Lateral_left_foot,
       RFT_DistEnd (right toe), RFT_ProxEnd (right heel), Lateral_right_foot.
 

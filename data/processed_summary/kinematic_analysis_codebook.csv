@@ -13,7 +13,7 @@ mass_kg,Body mass in kilograms.,float64
 bmi_kg_m2,Body mass index.,float64
 practice_years,Self-reported karate practice in years.,int64
 grade,Karate grade (kyu/dan or 'Branca' for white belt).,str
-style,Karate style lineage (Shotokan / Goju-Ryu / Wado-Ryu).,str
+style,Karate style lineage (Shotokan / Goju-Ryu).,str
 modality,Primary competitive modality (Kata / Kumite / None).,str
 level,Competitive level (International / National / Regional / None).,str
 weekly_days,Self-reported training days per week.,int64

@@ -8,7 +8,7 @@ Processing and analysis scripts for the dataset *A Biomechanical Dataset of Fund
 
 ## Dataset
 
-The dataset is openly available at Figshare under the reserved DOI [10.6084/m9.figshare.32288943](https://doi.org/10.6084/m9.figshare.32288943), CC-BY 4.0 licence.
+The dataset is openly available at Figshare under the DOI [10.6084/m9.figshare.32288943](https://doi.org/10.6084/m9.figshare.32288943) and a CC0 1.0 Universal public-domain dedication (version 1 was released under CC-BY 4.0).
 
 It contains synchronised force-platform (two Bertec FP4060-15, 1000 Hz) and markerless motion-capture (Qualisys Oqus, 180 Hz; Theia3D reconstruction) recordings of twelve trained karateka executing five 9-second *gyaku-tsuki* trials from each of three fundamental stances:
 
@@ -22,7 +22,7 @@ Cohort: 4 male + 8 female; 91.7 % black belt; 66.7 % international competitors; 
 
 ## What this repo contains
 
-This repository holds the *processing and analysis code* that accompanies the dataset (the dataset itself is on Figshare). The split follows Scientific Data conventions: data on a versioned archive (Figshare, DOI), code on a versioned source-control host (GitHub, this repo).
+This repository holds the *processing and analysis code* that accompanies the dataset (the dataset itself is on Figshare). The split follows common data-descriptor practice: data on a versioned archive (Figshare, DOI), code on a versioned source-control host (GitHub, this repo).
 
 ```
 karate-stances-dataset-scripts/
@@ -33,10 +33,8 @@ karate-stances-dataset-scripts/
 ├── CHANGELOG.md               release log
 ├── pyproject.toml             dependencies + pip-install configuration
 ├── src/
-│   ├── matlab/                MATLAB parity port (planned)
 │   └── python/kds/            Python pipeline (loader, kinematics, descriptors, batch driver)
 ├── data/
-│   ├── examples/              one example trial per stance (planned; for offline testing)
 │   └── processed_summary/     per-trial summary tables emitted by the released pipeline
 ├── docs/
 │   └── protocol.md            acquisition protocol summary
@@ -122,27 +120,23 @@ t = 6–9 s        —  post-strike re-stabilised quasi-static window
 t = 9 s          —  "relaxa" cue, trial closes
 ```
 
-Verbal instruction of each base was **style-adaptive**: the experimenter named the Shōtōkan-canonical stance and, for participants whose primary style was Naha-te-derived (Gōjū-ryū) or otherwise non-Shōtōkan (Wadō-ryū), the equivalent name in the participant's own tradition (e.g., *neko-ashi-dachi* for the posteriorised base in Gōjū-ryū). The objective was to ensure that each participant executed the configuration that her or his own style identifies with the requested base, rather than imposing a single technical canon.
+Verbal instruction of each base was **style-adaptive**: the experimenter named the Shōtōkan-canonical stance and, for participants whose primary style was Naha-te-derived (Gōjū-ryū), the equivalent name in the participant's own tradition (e.g., *neko-ashi-dachi* for the posteriorised base in Gōjū-ryū). The objective was to ensure that each participant executed the configuration that her or his own style identifies with the requested base, rather than imposing a single technical canon.
 
 The full protocol and ethics declaration are in [docs/protocol.md](docs/protocol.md).
 
 ## Reproducing the analysis
 
-Scripts are organised by analysis stream. The MATLAB pipeline (`src/matlab/`) reproduces the per-trial descriptors that ship with the Figshare release (`KDS_summary_pre_strike.csv`, `KDS_summary_post_strike.csv`). The Python helpers (`src/python/`) provide convenience loaders, plotting, and aggregate statistics for users who do not have a MATLAB licence.
-
-Both pipelines read the same archive structure: download the Figshare archive, unzip into `data/figshare/`, and the scripts pick up the trial files by their `<ID>_<BASE>_<TRIAL>.csv` naming convention.
-
-A worked example with a single trial per stance is included in `data/examples/` for testing without downloading the full archive.
+Download `KDS_kinematic_raw_c3d.zip` from Figshare, unzip it, and run `python -m kds.batch --data-root "/path/to/Kinematic Data" --output-dir ./output`. Then run `python src/python/build_analysis_csv.py` to consolidate the analysis tables. Reference outputs are in `data/processed_summary/`.
 
 ## Citing
 
 If you use the dataset or these scripts, please cite both:
 
 **Dataset**:
-> Pavani, L., Robalino, J. A., Parolini, F., Goethel, M., & Vilas-Boas, J. P. (2026). *A biomechanical dataset of fundamental karate-dō stances: Markerless kinematics and ground reaction forces in twelve karateka* [Data set]. Figshare. https://doi.org/10.6084/m9.figshare.32288943
+> Pavani, L., Parolini, F., Goethel, M., & Vilas-Boas, J. P. (2026). *A Biomechanical Dataset of Fundamental Karate-dō Stances: Markerless Kinematics and Ground Reaction Forces in Twelve Karateka* [Data set]. Figshare. https://doi.org/10.6084/m9.figshare.32288943
 
-**Data paper** (in preparation, target *Scientific Data*):
-> Pavani, L., Robalino, J. A., Parolini, F., Goethel, M., & Vilas-Boas, J. P. (in preparation). *A biomechanical dataset of fundamental karate-dō stances: Markerless kinematics and ground reaction forces in twelve karateka*.
+**Data Note** (submitted to *Open Research Europe*):
+> Pavani, L., Parolini, F., Goethel, M., & Vilas-Boas, J. P. (submitted). *A Biomechanical Dataset of Fundamental Karate-dō Stances: Markerless Kinematics and Ground Reaction Forces in Twelve Karateka*.
 
 ## Companion empirical paper
 
@@ -153,17 +147,16 @@ The dataset is the empirical substrate of the companion paper introducing the Re
 ## Authors and contact
 
 - **Luiz Pavani** (corresponding) — up202401900@up.pt — [ORCID 0009-0009-4831-5160](https://orcid.org/0009-0009-4831-5160) — CIFI2D/LABIOMEP, Faculty of Sport, University of Porto
-- Johan Andrés Robalino — CIFI2D/LABIOMEP, University of Porto
 - Franciele Parolini — CIFI2D/LABIOMEP, University of Porto
 - Márcio Goethel — CIFI2D/LABIOMEP, University of Porto (co-supervisor)
 - J. Paulo Vilas-Boas — CIFI2D/LABIOMEP, University of Porto (supervisor)
 
 ## Acknowledgements
 
-This work was developed within the framework of the first author's master's dissertation in High-Performance Sports Training at the Faculty of Sport, University of Porto. Data acquisition was conducted under the ethics approval granted to the broader doctoral project of J. A. Robalino on fatigue-induced changes in karate attack biomechanics (CEFADE, 2025).
+This work was developed within the framework of the first author's master's dissertation in High-Performance Sports Training at the Faculty of Sport, University of Porto. Data acquisition was conducted under the ethics approval granted to the broader doctoral project of J. A. Robalino on fatigue-induced changes in karate attack biomechanics (CEFADE, 2025). We thank Johan Andrés Robalino for conducting the data-collection sessions.
 
 ## Licences
 
 - **Code** in `src/`: MIT — see [LICENSE-CODE](LICENSE-CODE)
 - **Documentation** and `docs/`: CC-BY 4.0 — see [LICENSE-DOCS](LICENSE-DOCS)
-- **Dataset on Figshare**: CC-BY 4.0
+- **Dataset on Figshare**: CC0 1.0 Universal

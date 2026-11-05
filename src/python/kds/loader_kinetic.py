@@ -21,7 +21,7 @@ batch); both are handled here by counting columns at parse time:
         col 3-5: Mx, My, Mz (N.mm)
         col 6-8: COPx, COPy, COPz (mm)
         (sample index and time are not stored; reconstructed as
-         arange(N)/rate using the NO_OF_SAMPLES and FREQUENCY header fields)
+         (FIRST_SAMPLE - 1 + arange(N))/rate from the header fields)
 
 No filtering or transformation is performed at load time. The acquisition-
 time typo `KUK` (ID009 posteriorised base) is mapped to `KOK` at load time
@@ -107,7 +107,10 @@ def read_kinetic_tsv(path: str | Path) -> KineticTrial:
         moment = data[:, 5:8].T
         cop = data[:, 8:11].T
     elif data.shape[1] == 9:
-        time_col = np.arange(data.shape[0]) / rate
+        # FIRST_SAMPLE is 1-based. Records that start after the trial origin
+        # keep the common time base (ID006 KIB T4, ID007 KIB T5).
+        first_sample = int(header.get("FIRST_SAMPLE", ["1"])[0])
+        time_col = (first_sample - 1 + np.arange(data.shape[0])) / rate
         force = data[:, 0:3].T
         moment = data[:, 3:6].T
         cop = data[:, 6:9].T

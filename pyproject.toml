@@ -1,11 +1,10 @@
 [project]
 name = "karate-stances-pipeline"
-version = "0.6.0"
+version = "0.6.1"
 description = "Processing and analysis pipeline for the karate stances biomechanical dataset (DOI 10.6084/m9.figshare.32288943)"
 readme = "README.md"
 authors = [
     { name = "Luiz Pavani", email = "up202401900@up.pt" },
-    { name = "Johan Andrés Robalino" },
     { name = "Franciele Parolini" },
     { name = "Márcio Goethel" },
     { name = "J. Paulo Vilas-Boas" },

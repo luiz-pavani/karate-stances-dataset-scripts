@@ -33,9 +33,11 @@ platform fired (5 trials documented in the QC report), the columns of
 the absent platform are filled with `NaN` to preserve the dataset's
 matrix-shape regularity.
 
-Dynamic trials are 9 000 rows × 20 columns (9.00 s at 1000 Hz, with rare
-exceptions documented in the QC report). STATIC references are shorter
-(typically ~1 000–2 000 samples).
+Dynamic trials are 9 000 rows × 20 columns (9.00 s at 1000 Hz), except three
+shorter records whose force signal starts after the trial origin: `ID003 KIB T1`
+(7 750 rows, from t = 1.25 s), `ID006 KIB T4` (6 700 rows, from t = 2.30 s), and
+`ID007 KIB T5` (5 400 rows, from t = 3.60 s). `time_s` keeps the common trial
+origin, so these three CSVs do not start at 0. STATIC references have 2 000 rows.
 
 | Column | Variable | Unit | Frame |
 |---|---|---|---|

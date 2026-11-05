@@ -1,7 +1,7 @@
 {
-  "pipeline_version": "0.2.0",
+  "pipeline_version": "0.6.0",
   "run_timestamp": "2026-11-03T16:54:58.024093Z",
-  "data_root": "/Users/judo365/Documents/MASTER ESPORTES/MESTRADO/Artigos/DATASET/Kinematic Data",
+  "data_root": "Kinematic Data",
   "prefer_filtered": true,
   "n_trials_processed": 180,
   "n_static_processed": 9,

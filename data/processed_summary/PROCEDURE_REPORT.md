@@ -1,6 +1,6 @@
 # Procedure report — kinematic pipeline of the *karate stances* dataset
 
-**Date**: 2026-05-15 (updated 2026-11-03, pipeline v0.6.0)
+**Date**: 2026-05-15 (updated 2026-11-05, pipeline v0.6.0)
 **Author**: Luiz Pavani (open Python pipeline)
 **Figshare item**: [10.6084/m9.figshare.32288943](https://doi.org/10.6084/m9.figshare.32288943)
 **Open code**: <https://github.com/luiz-pavani/karate-stances-dataset-scripts>
@@ -47,7 +47,7 @@ find "<archive>" -type f | sed 's/.*\.//' | sort | uniq -c
 **Anomalies detected and handled**:
 
 1. **Acquisition-time typo**: folder `ID009/KUK/` should have read `KOK` — operator typo. Resolved in the loader (`BASE_CANONICAL = {"KUK": "KOK"}`) without renaming source files (source preservation).
-2. **Missing STATIC** for ID003, ID004, ID005 — pilot session without anatomical reference; treated by normalising on the first second of the trial.
+2. **Missing STATIC** for ID003, ID004, ID005 — sessions acquired without a kinematic anatomical reference. The released pipeline does not normalise the descriptors to the STATIC trials.
 3. **`ALL_TRIALS` and `ALL_TRIALS_BASES` folders** with copies of `_pose_filt_0.c3d` — ignored in `discover_trials()` to avoid duplication.
 
 ### 1.3 C3D inspection
@@ -84,7 +84,7 @@ pelvis_shifted
 
 ### 2.2 Input decision
 
-We use **`_pose_filt_0.c3d`** as the default input (Theia has already applied a zero-lag 20 Hz Butterworth filter, validated in Kanko et al. 2021a,b). The raw `_pose_0.c3d` files are also released so that users can re-filter with their own parameters.
+We use **`_pose_filt_0.c3d`** as the default input (Theia has already applied its native 20 Hz filter, recorded as `FILT_FREQ` in the C3D header; the Theia3D pipeline was validated in Kanko et al. 2021a,b). The raw `_pose_0.c3d` files are also released so that users can re-filter with their own parameters.
 
 ---
 
@@ -216,7 +216,7 @@ python -m kds.batch \
 3. For each trial: (a) `read_c3d_trial()` loads; (b) STATIC trials → COM mean across the full duration; (c) dynamic trials → `trial_descriptors()` computes the full panel.
 4. Emits five outputs:
    - `summary_all_trials.csv` (180 rows × 181 columns)
-   - `summary_static.csv` (9 rows × 12 columns)
+   - `summary_static.csv` (9 rows × 17 columns)
    - `subject_means.csv` (36 rows — per-subject × base means)
    - `qc_report.csv` (189 rows — QC flags)
    - `pipeline_metadata.json` (pipeline version + timestamp)
@@ -250,25 +250,23 @@ Peak time 4.03 ± 0.20 s vs nominal "*vai*" at 3.00 s — a reaction-plus-execut
 
 `BoS depth (cm) × base × style`:
 ```
-style       Goju-Ryu  Shotokan
-base                          (n=25)    (n=35)
-KIB           102.1      94.7
-KOK            53.0      90.3   ← within-base stylistic contrast
-ZEN            88.6      84.3
+base   Goju-Ryu (n=25)  Shotokan (n=35)
+KIB               11.7             13.9
+KOK               53.0             90.3   ← within-base stylistic contrast
+ZEN               88.6             84.3
 ```
 
-KOK Gōjū-ryū 53 cm vs Shōtōkan 90 cm = a 37 cm difference (58 % reduction in area), confirming that Gōjū-ryū practitioners execute *neko-ashi-dachi* even when verbally instructed under the Shōtōkan canonical name *kōkutsu-dachi*. Quantitative validation of the style-adaptive protocol.
+KOK Gōjū-ryū 53 cm vs Shōtōkan 90 cm = a 37 cm difference (58 % reduction in area), consistent with Gōjū-ryū practitioners executing *neko-ashi-dachi* under the style-adaptive instruction, in which the experimenter named both the Shōtōkan-canonical stance and the equivalent in the participant's own tradition. Descriptive check of the style-adaptive protocol.
 
 `COM height (m) × base × style`:
 ```
-style       Goju-Ryu  Shotokan
-base                          (n=25)    (n=35)
-KIB           0.601     0.717   ← within-base stylistic contrast
-KOK           0.710     0.745
-ZEN           0.682     0.738
+base   Goju-Ryu (n=25)  Shotokan (n=35)
+KIB              0.601            0.717   ← within-base stylistic contrast
+KOK              0.710            0.745
+ZEN              0.682            0.738
 ```
 
-KIB Gōjū-ryū 0.60 m vs Shōtōkan 0.72 m = a 12 cm difference, consistent with *shiko-dachi* (Naha-te lateralised stance, 45° foot rotation, lower COM) versus *kiba-dachi* (Shōtōkan).
+KIB Gōjū-ryū 0.60 m vs Shōtōkan 0.72 m = a 12 cm difference (37.6 vs 43.6 % of stature) between *shiko-dachi* and *kiba-dachi*. The Gōjū-ryū subgroup is also lower in the other two bases and shorter on average (160.0 vs 165.7 cm), so not all of this difference is specific to the base.
 
 ---
 
@@ -288,7 +286,7 @@ KIB Gōjū-ryū 0.60 m vs Shōtōkan 0.72 m = a 12 cm difference, consistent wit
 
 ## 7. Known limitations
 
-1. **STATIC missing for ID003–ID005** — first pilot session without reference. Treated via normalisation on the first second of each trial.
+1. **STATIC missing for ID003–ID005** — sessions acquired without a kinematic reference. The released pipeline does not normalise the descriptors to the STATIC trials.
 2. **Dynamic elbow ROM** can hit gimbal lock during wide movements (Euler degeneracy); static pre/post windows are not affected.
 3. **Pelvis and `pelvis_shifted` carry no inertia** in the Theia model — that mass is redistributed across thorax and thighs in Theia's parameterisation. The model-difference relative to Dempster amounts to the 13.5 mm cross-pipeline offset observed.
 4. **Wadō-ryū and Shitō-ryū absent** — cohort covers only two lineages (Shōtōkan n = 7; Gōjū-ryū n = 5).
@@ -317,7 +315,7 @@ python -m kds.batch \
 python src/python/build_analysis_csv.py
 ```
 
-Pipeline version used to produce this release: **v0.4.0**.
+Pipeline version used to produce this release: **v0.6.0**.
 
 ---
 

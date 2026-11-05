@@ -1,6 +1,6 @@
 # Placeholder
 
-MATLAB processing pipeline lands here when Robalino/Parolini hand off the scripts.
+Placeholder for a possible MATLAB port. No MATLAB pipeline is distributed.
 
 Expected contents:
 - `load_trial.m`            — parse `<ID>_<BASE>_<TRIAL>.csv` to struct

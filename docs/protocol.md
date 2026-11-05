@@ -1,6 +1,6 @@
 # Acquisition protocol
 
-This document summarises the protocol used to acquire the dataset. The authoritative protocol description is in §2.3 of the companion data paper (in preparation, target *Scientific Data*).
+This document summarises the protocol used to acquire the dataset. The authoritative protocol description is in §2.3 of the companion Data Note (submitted to *Open Research Europe*).
 
 ## Cohort
 
@@ -8,11 +8,11 @@ This document summarises the protocol used to acquire the dataset. The authorita
 - 91.7 % black belt (≥ 1 Dan; 11/12 — two 3rd Dan, nine 1st Dan); one white-belt entry-level practitioner retained to characterise the lower bound of the experience continuum
 - 66.7 % international competitors; two national; one regional
 - 6 competing primarily in *kata* + 5 in *kumite*
-- Style stratification: 6 Shōtōkan + 5 Gōjū-ryū + 1 Wadō-ryū (descriptive single-subject reference)
+- Style stratification: 7 Shōtōkan + 5 Gōjū-ryū
 - Mean age 23.8 ± 7.5 years (range 19–45)
 - Mean stature 163.3 ± 8.1 cm
 - Mean body mass 72.2 ± 14.9 kg
-- BMI 26.96 ± 4.60 kg·m⁻²
+- BMI 27.0 ± 4.6 kg·m⁻²
 - Mean training history 13.8 ± 5.5 years (range 1–25)
 
 ## Equipment
@@ -21,7 +21,7 @@ This document summarises the protocol used to acquire the dataset. The authorita
 - **Motion capture**: eight-camera Qualisys Oqus system, 180 Hz.
 - **Markerless reconstruction**: Theia3D software (Theia Markerless Inc., Kingston, Ontario, Canada). Concurrent validity assessed by Kanko et al. (2021a, 2021b).
 - **Synchronisation**: hardware trigger between kinematic and kinetic streams.
-- **Analysis**: MATLAB custom scripts.
+- **Analysis**: open Python pipeline (`src/python/kds/`).
 
 ## Trial structure
 
@@ -40,19 +40,19 @@ t = 9 s    "relaxa"                  trial closes
 
 Verbal instruction was paired between the Shōtōkan-canonical name and the participant's stylistic equivalent. The pairing convention:
 
-| Base mechanic | Shōtōkan cue | Naha-te equivalent | Wadō-ryū equivalent |
-|---|---|---|---|
-| anteriorised | *zenkutsu-dachi* | *zenkutsu-dachi* | *zenkutsu-dachi* |
-| posteriorised | *kōkutsu-dachi* | *neko-ashi-dachi* | *neko-ashi-dachi* / *kōkutsu-dachi* |
-| lateralised | *kiba-dachi* | *shiko-dachi* | *kiba-dachi* |
+| Base mechanic | Shōtōkan cue | Gōjū-ryū equivalent |
+|---|---|---|
+| anteriorised | *zenkutsu-dachi* | *zenkutsu-dachi* |
+| posteriorised | *kōkutsu-dachi* | *neko-ashi-dachi* |
+| lateralised | *kiba-dachi* | *shiko-dachi* |
 
 The objective was to ensure that each participant executed the configuration that her or his own style identifies with the requested base, rather than imposing a single technical canon. The per-trial pairing of canonical and stylistic-equivalent names is recorded explicitly in the dataset metadata.
 
 ## File naming convention
 
 ```
-<ID>_<BASE>_<TRIAL>.csv      e.g., ID003_ZEN_T1.csv
-<ID>_STATIC.csv              anatomical reference (2 s on FP3)
+<ID>_<BASE>_<TRIAL>_kinematics.csv / _kinetics.csv   e.g., ID003_ZEN_T1_kinematics.csv
+<ID>_STATIC_T1_kinematics.csv / _kinetics.csv        anatomical reference (2 s on FP3)
 ```
 
 - `<ID>`: `ID003`–`ID014` (twelve participants; `ID001`–`ID002` are pilot sessions, not released).

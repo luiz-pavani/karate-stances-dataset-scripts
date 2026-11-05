@@ -144,8 +144,8 @@ def export_all(data_root: Path, output_dir: Path) -> dict:
             "has_plate_3": has_3,
             "has_plate_4": has_4,
             "n_plates": int(has_3) + int(has_4),
-            "source_path_3": next((x.source_path for x in group if x.plate == 3), ""),
-            "source_path_4": next((x.source_path for x in group if x.plate == 4), ""),
+            "source_path_3": Path(next((x.source_path for x in group if x.plate == 3), "")).name,
+            "source_path_4": Path(next((x.source_path for x in group if x.plate == 4), "")).name,
             "kuk_alias_applied": "KUK" in (
                 next((x.source_path for x in group if x.plate in (3, 4)), "")),
         })

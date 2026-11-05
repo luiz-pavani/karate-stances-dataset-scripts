@@ -4,16 +4,18 @@ All notable changes to this repository will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.6.1] — 2026-11-05
 
-### Corrected
-- **Procedure report wording, EN and PT (`data/processed_summary/PROCEDURE_REPORT.md`,
-  `docs/procedure_report.md`).** The description of *shiko-dachi* as having
-  "internally-rotated femurs" is removed. No source supports it and the dataset
-  contradicts it: the hip is in external rotation in all 12 participants
-  (pre-strike window, Cardan `hip_*_rot_deg`: *shiko-dachi* n = 5, 53.7 ± 6.3°;
-  *kiba-dachi* n = 7, 35.3 ± 8.2°; static reference about 6.5°). Documentation only:
-  no data file, table or pipeline output changes.
+### Fixed
+- **Kinetic time axis (`kds.loader_kinetic`).** In the 9-column TSV variant, time was reconstructed from 0 and ignored the `FIRST_SAMPLE` header field. Two per-trial CSVs were therefore shifted relative to the kinematic stream: `ID006 KIB T4` (by 2.30 s) and `ID007 KIB T5` (by 3.60 s). `time_s` now keeps the common trial origin, and `duration_s` in `kinetic_qc_report.csv` is corrected for these two trials. The force, moment and COP values and the raw TSV files are unchanged.
+
+### Corrected (documentation)
+- **Procedure report.** Removed the description of *shiko-dachi* as having "internally-rotated femurs": no source supports it and the dataset contradicts it (external hip rotation in all 12 participants; pre-strike window, Cardan `hip_*_rot_deg`: *shiko-dachi* n = 5, 53.7 ± 6.3°; *kiba-dachi* n = 7, 35.3 ± 8.2°; static reference about 6.5°). Corrected the "BoS depth" table, whose `KIB` row still showed the width (mislabelled before v0.5.0), and the stated pipeline version. Removed the claim that descriptors are normalised on the first second of the trial, which the pipeline does not do.
+- **`README_DATASET.md`, `README.md`, `docs/protocol.md`, `CITATION.cff`.** Aligned with the released data: 7 Shōtōkan + 5 Gōjū-ryū, CC0 licence for the dataset, current authorship, real archive layout and column lists. The outdated Portuguese report (`docs/procedure_report.md`) is removed.
+- **`kinetic_qc_report.csv`, `pipeline_metadata.json`.** Local absolute paths replaced by file and folder names.
+
+### Added
+- `src/python/qc_force_platform_baseline.py`: baseline COP fluctuation reported in the Data Note.
 
 ## [0.6.0] — 2026-11-03
 

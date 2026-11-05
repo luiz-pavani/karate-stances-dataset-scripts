@@ -120,7 +120,7 @@ def run_pipeline(data_root: str | Path, output_dir: str | Path,
     meta = {
         "pipeline_version": __version__,
         "run_timestamp": datetime.utcnow().isoformat() + "Z",
-        "data_root": str(data_root),
+        "data_root": data_root.name,
         "prefer_filtered": prefer_filtered,
         "n_trials_processed": int(len(df_dyn)),
         "n_static_processed": int(len(df_sta)),
