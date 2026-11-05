@@ -316,7 +316,7 @@ KOK           0.710     0.740     0.792
 ZEN           0.682     0.735     0.803
 ```
 
-KIB Goju 0,60 m vs Shotokan 0,72 m = **diferença de 12 cm**, consistente com *shiko-dachi* Naha-te (45° pés fora, fêmures girados internamente, COM mais baixo) vs *kiba-dachi* Shōtōkan.
+KIB Goju 0,60 m vs Shotokan 0,72 m = **diferença de 12 cm**, consistente com *shiko-dachi* Naha-te (45° pés fora, COM mais baixo) vs *kiba-dachi* Shōtōkan.
 
 ---
 

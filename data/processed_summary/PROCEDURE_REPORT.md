@@ -268,7 +268,7 @@ KOK           0.710     0.745
 ZEN           0.682     0.738
 ```
 
-KIB Gōjū-ryū 0.60 m vs Shōtōkan 0.72 m = a 12 cm difference, consistent with *shiko-dachi* (Naha-te lateralised stance, 45° foot rotation, internally-rotated femurs, lower COM) versus *kiba-dachi* (Shōtōkan).
+KIB Gōjū-ryū 0.60 m vs Shōtōkan 0.72 m = a 12 cm difference, consistent with *shiko-dachi* (Naha-te lateralised stance, 45° foot rotation, lower COM) versus *kiba-dachi* (Shōtōkan).
 
 ---
 

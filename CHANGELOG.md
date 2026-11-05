@@ -4,6 +4,17 @@ All notable changes to this repository will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Corrected
+- **Procedure report wording, EN and PT (`data/processed_summary/PROCEDURE_REPORT.md`,
+  `docs/procedure_report.md`).** The description of *shiko-dachi* as having
+  "internally-rotated femurs" is removed. No source supports it and the dataset
+  contradicts it: the hip is in external rotation in all 12 participants
+  (pre-strike window, Cardan `hip_*_rot_deg`: *shiko-dachi* n = 5, 53.7 ± 6.3°;
+  *kiba-dachi* n = 7, 35.3 ± 8.2°; static reference about 6.5°). Documentation only:
+  no data file, table or pipeline output changes.
+
 ## [0.6.0] — 2026-11-03
 
 ### Fixed
