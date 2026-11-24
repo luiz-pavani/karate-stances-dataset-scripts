@@ -61,7 +61,7 @@ The objective was to ensure that each participant executed the configuration tha
 
 ## Foot placement
 
-- Front foot on FP3, rear foot on FP4 (LABIOMEP installation numbering).
+- Rear foot on FP3, front foot on FP4 (LABIOMEP installation numbering). Verified in all `ZEN`/`KOK` trials with both platforms loaded: the foot on FP3 is the posterior one along lab +Y, the direction of the punch.
 - For `KIB` (symmetric base), FP3/FP4 assignment is arbitrary and treated as left/right.
 - Inter-foot distance: each participant's preferred technical distance.
 - Foot orientation: by the stance convention of the participant's own style.

@@ -27,7 +27,7 @@ corresponding files are written as `ID009_KOK_T<N>_kinetics.csv`.
 
 Each trial CSV carries **20 columns**: 2 identifying columns and a
 side-by-side 9-column block for each of the two force platforms (Bertec
-3 = front foot, Bertec 4 = rear foot in `ZEN`/`KOK`; arbitrary left/right
+3 = rear foot, Bertec 4 = front foot in `ZEN`/`KOK`; arbitrary left/right
 assignment for the symmetric `KIB`). For trials in which only one
 platform fired (5 trials documented in the QC report), the columns of
 the absent platform are filled with `NaN` to preserve the dataset's

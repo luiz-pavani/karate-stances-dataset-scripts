@@ -1,7 +1,7 @@
 """Load Bertec force-platform TSV files exported by Qualisys QTM.
 
-Each acquired trial yields one TSV per platform (Bertec 3 = front foot,
-Bertec 4 = rear foot in ZEN/KOK; arbitrary left/right in symmetric KIB).
+Each acquired trial yields one TSV per platform (Bertec 3 = rear foot,
+Bertec 4 = front foot in ZEN/KOK; arbitrary left/right in symmetric KIB).
 The TSV carries a 26-line header with platform metadata (sampling rate,
 4 corner positions in the lab frame, plate length/width, offsets) followed
 by N rows of either 11 or 9 numeric columns sampled at 1000 Hz.

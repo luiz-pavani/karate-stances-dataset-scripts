@@ -28,6 +28,8 @@ All time-series are expressed in the laboratory frame (X, Y horizontal; Z vertic
 
 *Correction note (v4):* in versions 1–3, the `time_s` column of two per-trial kinetic CSVs started at 0 instead of the true record start, shifting them relative to the kinematic stream: `ID006 KIB T4` (by 2.30 s) and `ID007 KIB T5` (by 3.60 s). Version 4 corrects these two files. It also corrects the procedure report (see the repository `CHANGELOG.md`, entry 0.6.1). The force, moment and COP values and the raw archives are unchanged.
 
+*Correction note (v5):* versions 1–4 of the kinetic `README.md` and of `protocol.md` stated that the front foot stood on force platform 3 (FP3) and the rear foot on FP4 in `ZEN` and `KOK`. The reverse is true: **FP3 carries the rear foot and FP4 the front foot** (verified in all 113 `ZEN`/`KOK` trials with both platforms loaded; see the repository `CHANGELOG.md`, entry 0.6.2). Version 5 changes documentation only (these two documents, the changelog and this README); every data file is unchanged.
+
 ## 2. Files released on Figshare
 
 | File | Size | Content |
@@ -129,4 +131,4 @@ All participants were recruited in the Porto metropolitan karate community, prov
 
 ---
 
-*README updated for version 4 — 2026-11-05 (Figshare 32288943).*
+*README updated for version 5 — 2026-11-24 (Figshare 32288943).*

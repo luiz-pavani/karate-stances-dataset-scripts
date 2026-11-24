@@ -4,6 +4,11 @@ All notable changes to this repository will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.2] — 2026-11-24
+
+### Corrected (documentation)
+- **Platform-to-foot assignment.** `docs/protocol.md`, the kinetic `README.md` and the `kds.loader_kinetic` docstring stated that the front foot stood on Bertec FP3 and the rear foot on FP4 in `ZEN` and `KOK`. The data show the reverse: in all 113 `ZEN`/`KOK` trials with both platforms loaded (> 50 N), the foot on FP3 is the posterior one along lab +Y, the direction of the punch (FP3 spans lab y ≈ 0–0.58 m, FP4 y ≈ 0.59–1.19 m). Load shares agree: FP3 carries on average 68.5 % of body weight in `KOK` (back stance) and 44.9 % in `ZEN`. Only the documentation changes; no code path assumed either assignment, and all data files are unchanged.
+
 ## [0.6.1] — 2026-11-05
 
 ### Fixed
